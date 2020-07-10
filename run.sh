@@ -1,13 +1,8 @@
 #!/usr/bin/env bash
 source /etc/profile
-cd /home/gao/project/WeiboCrawler/WeiboSearch/
-current_date=`date +%Y-%m-%d`
-/home/gao/.pyenv/shims/python /home/gao/project/WeiboCrawler/WeiboSearch/login.py >> /home/gao/project/WeiboCrawler/WeiboSearch/log/cookie.log
+cd /home/gao/project/weibo_crawler_violence/WeiboSearch/
+/home/gao/.pyenv/shims/python /home/gao/project/weibo_crawler_violence/WeiboSearch/login.py >> /home/gao/project/weibo_crawler_violence/WeiboSearch/log/cookie.log
 sleep 3
-/home/gao/.pyenv/shims/python /home/gao/project/WeiboCrawler/WeiboSearch/run.py >> /home/gao/project/WeiboCrawler/WeiboSearch/log/bash.log
+/home/gao/.pyenv/shims/python /home/gao/project/weibo_crawler_violence/WeiboSearch/run.py >> /home/gao/project/weibo_crawler_violence/WeiboSearch/log/bash.log
 sleep 3
-/home/gao/.pyenv/shims/python /home/gao/project/WeiboCrawler/WeiboSearch/run.py --keyword="冠状病毒" >> /home/gao/project/WeiboCrawler/WeiboSearch/log/bash.log
-sleep 3
-/home/gao/.pyenv/shims/python /home/gao/project/WeiboCrawler/WeiboSearch/run.py --keyword="新冠肺炎" >> /home/gao/project/WeiboCrawler/WeiboSearch/log/bash.log
-sleep 3
-/home/gao/.pyenv/shims/python /home/gao/project/WeiboCrawler/WeiboSearch/daily_word_cloud.py --date=${current_date} >> /home/gao/project/WeiboCrawler/WeiboSearch/log/upload_image.log
+/home/gao/.pyenv/shims/python /home/gao/project/weibo_crawler_violence/WeiboSearch/run.py --keyword="#面对家暴不再沉默#" >> /home/gao/project/weibo_crawler_violence/WeiboSearch/log/bash.log
