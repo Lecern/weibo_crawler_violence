@@ -1,0 +1,111 @@
+2020-04-11 16:40:24	scrapy.utils.log	INFO	Scrapy 1.8.0 started (bot: WeiboSearch)
+2020-04-11 16:40:24	scrapy.utils.log	INFO	Versions: lxml 4.5.0.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.6 (default, Jan  8 2020, 13:42:34) - [Clang 4.0.1 (tags/RELEASE_401/final)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1e  17 Mar 2020), cryptography 2.8, Platform Darwin-19.4.0-x86_64-i386-64bit
+2020-04-11 16:40:24	scrapy.crawler	INFO	Overridden settings: {'BOT_NAME': 'WeiboSearch', 'DOWNLOAD_DELAY': 1, 'LOG_ENABLED': '0', 'NEWSPIDER_MODULE': 'WeiboSearch.spiders', 'RETRY_HTTP_CODES': [401, 403, 408, 414, 500, 502, 503, 504], 'SPIDER_MODULES': ['WeiboSearch.spiders']}
+2020-04-11 16:40:24	scrapy.extensions.telnet	INFO	Telnet Password: e87abfe4c3c0984d
+2020-04-11 16:40:24	scrapy.middleware	INFO	Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-04-11 16:40:25	scrapy.middleware	INFO	Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'WeiboSearch.middlewares.CookiesMiddleware',
+ 'WeiboSearch.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-04-11 16:40:25	scrapy.middleware	INFO	Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-04-11 16:40:25	scrapy.middleware	INFO	Enabled item pipelines:
+['WeiboSearch.pipelines.TimePipeline',
+ 'WeiboSearch.pipelines.WeiboSpiderPipeline',
+ 'WeiboSearch.pipelines.MongoPipeline']
+2020-04-11 16:40:25	scrapy.core.engine	INFO	Spider opened
+2020-04-11 16:40:25	scrapy.extensions.logstats	INFO	Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-04-11 16:40:25	scrapy.extensions.telnet	INFO	Telnet console listening on 127.0.0.1:6023
+2020-04-11 16:40:55	scrapy.core.scraper	ERROR	Error downloading <GET https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89%20%E8%82%BA%E7%82%8E&advancedfilter=1&starttime=20200406&endtime=20200407&sort=time&hasori=1>
+Traceback (most recent call last):
+  File "/Users/gao/.local/lib/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "/Users/gao/opt/anaconda3/lib/python3.7/site-packages/scrapy/core/downloader/middleware.py", line 38, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/Users/gao/PycharmProjects/WeiboCrawler/WeiboSearch/middlewares.py", line 69, in process_request
+    all_count = self.account_collection.find({'status': 'success'}).count()
+  File "/Users/gao/opt/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 787, in count
+    cmd, self.__collation, session=self.__session)
+  File "/Users/gao/opt/anaconda3/lib/python3.7/site-packages/pymongo/collection.py", line 1600, in _count
+    _cmd, self._read_preference_for(session), session)
+  File "/Users/gao/opt/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1455, in _retryable_read
+    read_pref, session, address=address)
+  File "/Users/gao/opt/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1254, in _select_server
+    server = topology.select_server(server_selector)
+  File "/Users/gao/opt/anaconda3/lib/python3.7/site-packages/pymongo/topology.py", line 231, in select_server
+    address))
+  File "/Users/gao/opt/anaconda3/lib/python3.7/site-packages/pymongo/topology.py", line 189, in select_servers
+    selector, server_timeout, address)
+  File "/Users/gao/opt/anaconda3/lib/python3.7/site-packages/pymongo/topology.py", line 205, in _select_servers_loop
+    self._error_message(selector))
+pymongo.errors.ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 61] Connection refused
+2020-04-11 16:40:55	scrapy.core.engine	INFO	Closing spider (finished)
+2020-04-11 16:40:55	scrapy.statscollectors	INFO	Dumping Scrapy stats:
+{'downloader/exception_count': 1,
+ 'downloader/exception_type_count/pymongo.errors.ServerSelectionTimeoutError': 1,
+ 'elapsed_time_seconds': 30.4494,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 4, 11, 7, 40, 55, 742455),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 10,
+ 'memusage/max': 108462080,
+ 'memusage/startup': 108457984,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 4, 11, 7, 40, 25, 293055)}
+2020-04-11 16:40:55	scrapy.core.engine	INFO	Spider closed (finished)
+2020-04-11 16:44:33	scrapy.utils.log	INFO	Scrapy 1.8.0 started (bot: WeiboSearch)
+2020-04-11 16:44:33	scrapy.utils.log	INFO	Versions: lxml 4.5.0.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.6 (default, Jan  8 2020, 13:42:34) - [Clang 4.0.1 (tags/RELEASE_401/final)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1e  17 Mar 2020), cryptography 2.8, Platform Darwin-19.4.0-x86_64-i386-64bit
+2020-04-11 16:44:33	scrapy.crawler	INFO	Overridden settings: {'BOT_NAME': 'WeiboSearch', 'DOWNLOAD_DELAY': 1, 'LOG_ENABLED': '0', 'NEWSPIDER_MODULE': 'WeiboSearch.spiders', 'RETRY_HTTP_CODES': [401, 403, 408, 414, 500, 502, 503, 504], 'SPIDER_MODULES': ['WeiboSearch.spiders']}
+2020-04-11 16:44:33	scrapy.extensions.telnet	INFO	Telnet Password: 9336bca920c7e357
+2020-04-11 16:44:33	scrapy.middleware	INFO	Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-04-11 16:44:34	scrapy.middleware	INFO	Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'WeiboSearch.middlewares.CookiesMiddleware',
+ 'WeiboSearch.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-04-11 16:44:34	scrapy.middleware	INFO	Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-04-11 16:44:34	scrapy.middleware	INFO	Enabled item pipelines:
+['WeiboSearch.pipelines.TimePipeline',
+ 'WeiboSearch.pipelines.WeiboSpiderPipeline',
+ 'WeiboSearch.pipelines.MongoPipeline']
+2020-04-11 16:44:34	scrapy.core.engine	INFO	Spider opened
+2020-04-11 16:44:34	scrapy.extensions.logstats	INFO	Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-04-11 16:44:34	scrapy.extensions.telnet	INFO	Telnet console listening on 127.0.0.1:6023
+2020-04-11 16:44:34	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-04-11 16:44:35	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89%20%E8%82%BA%E7%82%8E&advancedfilter=1&starttime=20200406&endtime=20200407&sort=time&hasori=1> (referer: None)
+2020-04-11 16:47:49	scrapy.crawler	INFO	Received SIGINT, shutting down gracefully. Send again to force 

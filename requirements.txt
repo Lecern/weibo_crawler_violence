@@ -1,0 +1,9 @@
+mecab-python3
+wordcloud
+scp
+jieba
+paramiko
+selenium
+requests
+pymongo
+scrapy

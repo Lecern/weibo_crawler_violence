@@ -1,0 +1,1497 @@
+2020-02-04 13:14:36	scrapy.utils.log	INFO	Scrapy 1.8.0 started (bot: WeiboSearch)
+2020-02-04 13:14:36	scrapy.utils.log	INFO	Versions: lxml 4.4.2.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.5 (default, Oct 25 2019, 10:52:18) - [Clang 4.0.1 (tags/RELEASE_401/final)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Darwin-19.3.0-x86_64-i386-64bit
+2020-02-04 13:14:36	scrapy.crawler	INFO	Overridden settings: {'BOT_NAME': 'WeiboSearch', 'DOWNLOAD_DELAY': 1, 'LOG_ENABLED': '0', 'NEWSPIDER_MODULE': 'WeiboSearch.spiders', 'RETRY_HTTP_CODES': [401, 403, 408, 414, 500, 502, 503, 504], 'SPIDER_MODULES': ['WeiboSearch.spiders']}
+2020-02-04 13:14:36	scrapy.extensions.telnet	INFO	Telnet Password: d27620ae593001a6
+2020-02-04 13:14:36	scrapy.middleware	INFO	Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-02-04 13:14:37	scrapy.middleware	INFO	Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'WeiboSearch.middlewares.CookiesMiddleware',
+ 'WeiboSearch.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-02-04 13:14:37	scrapy.middleware	INFO	Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-02-04 13:14:37	scrapy.middleware	INFO	Enabled item pipelines:
+['WeiboSearch.pipelines.TimePipeline',
+ 'WeiboSearch.pipelines.WeiboSpiderPipeline',
+ 'WeiboSearch.pipelines.MongoPipeline']
+2020-02-04 13:14:37	scrapy.core.engine	INFO	Spider opened
+2020-02-04 13:14:37	scrapy.extensions.logstats	INFO	Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-02-04 13:14:37	scrapy.extensions.telnet	INFO	Telnet console listening on 127.0.0.1:6023
+2020-02-04 13:14:54	scrapy.crawler	INFO	Received SIGINT, shutting down gracefully. Send again to force 
+2020-02-04 13:15:05	scrapy.utils.log	INFO	Scrapy 1.8.0 started (bot: WeiboSearch)
+2020-02-04 13:15:05	scrapy.utils.log	INFO	Versions: lxml 4.4.2.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.5 (default, Oct 25 2019, 10:52:18) - [Clang 4.0.1 (tags/RELEASE_401/final)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Darwin-19.3.0-x86_64-i386-64bit
+2020-02-04 13:15:05	scrapy.crawler	INFO	Overridden settings: {'BOT_NAME': 'WeiboSearch', 'DOWNLOAD_DELAY': 1, 'LOG_ENABLED': '0', 'NEWSPIDER_MODULE': 'WeiboSearch.spiders', 'RETRY_HTTP_CODES': [401, 403, 408, 414, 500, 502, 503, 504], 'SPIDER_MODULES': ['WeiboSearch.spiders']}
+2020-02-04 13:15:05	scrapy.extensions.telnet	INFO	Telnet Password: da80a31b014f3c22
+2020-02-04 13:15:05	scrapy.middleware	INFO	Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-02-04 13:15:05	scrapy.middleware	INFO	Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'WeiboSearch.middlewares.CookiesMiddleware',
+ 'WeiboSearch.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-02-04 13:15:05	scrapy.middleware	INFO	Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-02-04 13:15:05	scrapy.middleware	INFO	Enabled item pipelines:
+['WeiboSearch.pipelines.TimePipeline',
+ 'WeiboSearch.pipelines.WeiboSpiderPipeline',
+ 'WeiboSearch.pipelines.MongoPipeline']
+2020-02-04 13:15:05	scrapy.core.engine	INFO	Spider opened
+2020-02-04 13:15:05	scrapy.extensions.logstats	INFO	Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-02-04 13:15:05	scrapy.extensions.telnet	INFO	Telnet console listening on 127.0.0.1:6023
+2020-02-04 13:15:18	scrapy.crawler	INFO	Received SIGINT, shutting down gracefully. Send again to force 
+2020-02-04 13:15:59	scrapy.utils.log	INFO	Scrapy 1.8.0 started (bot: WeiboSearch)
+2020-02-04 13:15:59	scrapy.utils.log	INFO	Versions: lxml 4.4.2.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.5 (default, Oct 25 2019, 10:52:18) - [Clang 4.0.1 (tags/RELEASE_401/final)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Darwin-19.3.0-x86_64-i386-64bit
+2020-02-04 13:15:59	scrapy.crawler	INFO	Overridden settings: {'BOT_NAME': 'WeiboSearch', 'DOWNLOAD_DELAY': 1, 'LOG_ENABLED': '0', 'NEWSPIDER_MODULE': 'WeiboSearch.spiders', 'RETRY_HTTP_CODES': [401, 403, 408, 414, 500, 502, 503, 504], 'SPIDER_MODULES': ['WeiboSearch.spiders']}
+2020-02-04 13:15:59	scrapy.extensions.telnet	INFO	Telnet Password: b5ba9880b87a7aa4
+2020-02-04 13:15:59	scrapy.middleware	INFO	Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-02-04 13:15:59	scrapy.middleware	INFO	Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'WeiboSearch.middlewares.CookiesMiddleware',
+ 'WeiboSearch.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-02-04 13:15:59	scrapy.middleware	INFO	Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-02-04 13:15:59	scrapy.middleware	INFO	Enabled item pipelines:
+['WeiboSearch.pipelines.TimePipeline',
+ 'WeiboSearch.pipelines.WeiboSpiderPipeline',
+ 'WeiboSearch.pipelines.MongoPipeline']
+2020-02-04 13:15:59	scrapy.core.engine	INFO	Spider opened
+2020-02-04 13:15:59	scrapy.extensions.logstats	INFO	Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-02-04 13:15:59	scrapy.extensions.telnet	INFO	Telnet console listening on 127.0.0.1:6023
+2020-02-04 13:16:43	scrapy.core.scraper	ERROR	Error downloading <GET https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E8%8D%B7%E8%AD%A6%E6%92%AD%E6%8A%A5%20%E6%AD%A6%E6%B1%89%E8%88%AA%E7%8F%AD&advancedfilter=1&starttime=20200101&endtime=20200102&sort=time&hasori=1>
+Traceback (most recent call last):
+  File "/Users/gao/.local/lib/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "/Users/gao/opt/anaconda3/lib/python3.7/site-packages/scrapy/core/downloader/middleware.py", line 38, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/Users/gao/PycharmProjects/WeiboCrawler/WeiboSearch/middlewares.py", line 69, in process_request
+    all_count = self.account_collection.find({'status': 'success'}).count()
+  File "/Users/gao/opt/anaconda3/lib/python3.7/site-packages/pymongo/cursor.py", line 787, in count
+    cmd, self.__collation, session=self.__session)
+  File "/Users/gao/opt/anaconda3/lib/python3.7/site-packages/pymongo/collection.py", line 1600, in _count
+    _cmd, self._read_preference_for(session), session)
+  File "/Users/gao/opt/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1455, in _retryable_read
+    read_pref, session, address=address)
+  File "/Users/gao/opt/anaconda3/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1254, in _select_server
+    server = topology.select_server(server_selector)
+  File "/Users/gao/opt/anaconda3/lib/python3.7/site-packages/pymongo/topology.py", line 231, in select_server
+    address))
+  File "/Users/gao/opt/anaconda3/lib/python3.7/site-packages/pymongo/topology.py", line 189, in select_servers
+    selector, server_timeout, address)
+  File "/Users/gao/opt/anaconda3/lib/python3.7/site-packages/pymongo/topology.py", line 205, in _select_servers_loop
+    self._error_message(selector))
+pymongo.errors.ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 61] Connection refused
+2020-02-04 13:16:43	scrapy.core.engine	INFO	Closing spider (finished)
+2020-02-04 13:16:43	scrapy.statscollectors	INFO	Dumping Scrapy stats:
+{'downloader/exception_count': 1,
+ 'downloader/exception_type_count/pymongo.errors.ServerSelectionTimeoutError': 1,
+ 'elapsed_time_seconds': 44.065636,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 2, 4, 4, 16, 43, 936591),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 10,
+ 'memusage/max': 108625920,
+ 'memusage/startup': 108625920,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 2, 4, 4, 15, 59, 870955)}
+2020-02-04 13:16:43	scrapy.core.engine	INFO	Spider closed (finished)
+2020-02-04 13:17:28	scrapy.utils.log	INFO	Scrapy 1.8.0 started (bot: WeiboSearch)
+2020-02-04 13:17:28	scrapy.utils.log	INFO	Versions: lxml 4.4.2.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.5 (default, Oct 25 2019, 10:52:18) - [Clang 4.0.1 (tags/RELEASE_401/final)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Darwin-19.3.0-x86_64-i386-64bit
+2020-02-04 13:17:28	scrapy.crawler	INFO	Overridden settings: {'BOT_NAME': 'WeiboSearch', 'DOWNLOAD_DELAY': 1, 'LOG_ENABLED': '0', 'NEWSPIDER_MODULE': 'WeiboSearch.spiders', 'RETRY_HTTP_CODES': [401, 403, 408, 414, 500, 502, 503, 504], 'SPIDER_MODULES': ['WeiboSearch.spiders']}
+2020-02-04 13:17:28	scrapy.extensions.telnet	INFO	Telnet Password: 714389dbaa96fcd4
+2020-02-04 13:17:28	scrapy.middleware	INFO	Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-02-04 13:17:29	scrapy.middleware	INFO	Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'WeiboSearch.middlewares.CookiesMiddleware',
+ 'WeiboSearch.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-02-04 13:17:29	scrapy.middleware	INFO	Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-02-04 13:17:29	scrapy.middleware	INFO	Enabled item pipelines:
+['WeiboSearch.pipelines.TimePipeline',
+ 'WeiboSearch.pipelines.WeiboSpiderPipeline',
+ 'WeiboSearch.pipelines.MongoPipeline']
+2020-02-04 13:17:29	scrapy.core.engine	INFO	Spider opened
+2020-02-04 13:17:29	scrapy.extensions.logstats	INFO	Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-02-04 13:17:29	scrapy.extensions.telnet	INFO	Telnet console listening on 127.0.0.1:6023
+2020-02-04 13:17:29	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 13:17:30	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E8%8D%B7%E8%AD%A6%E6%92%AD%E6%8A%A5%20%E6%AD%A6%E6%B1%89%E8%88%AA%E7%8F%AD&advancedfilter=1&starttime=20200101&endtime=20200102&sort=time&hasori=1> (referer: None)
+2020-02-04 13:17:51	scrapy.crawler	INFO	Received SIGINT, shutting down gracefully. Send again to force 
+2020-02-04 13:19:34	scrapy.utils.log	INFO	Scrapy 1.8.0 started (bot: WeiboSearch)
+2020-02-04 13:19:34	scrapy.utils.log	INFO	Versions: lxml 4.4.2.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.5 (default, Oct 25 2019, 10:52:18) - [Clang 4.0.1 (tags/RELEASE_401/final)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Darwin-19.3.0-x86_64-i386-64bit
+2020-02-04 13:19:34	scrapy.crawler	INFO	Overridden settings: {'BOT_NAME': 'WeiboSearch', 'DOWNLOAD_DELAY': 1, 'LOG_ENABLED': '0', 'NEWSPIDER_MODULE': 'WeiboSearch.spiders', 'RETRY_HTTP_CODES': [401, 403, 408, 414, 500, 502, 503, 504], 'SPIDER_MODULES': ['WeiboSearch.spiders']}
+2020-02-04 13:19:34	scrapy.extensions.telnet	INFO	Telnet Password: 12e5dadb8c66478a
+2020-02-04 13:19:34	scrapy.middleware	INFO	Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-02-04 13:19:34	scrapy.middleware	INFO	Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'WeiboSearch.middlewares.CookiesMiddleware',
+ 'WeiboSearch.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-02-04 13:19:34	scrapy.middleware	INFO	Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-02-04 13:19:34	scrapy.middleware	INFO	Enabled item pipelines:
+['WeiboSearch.pipelines.TimePipeline',
+ 'WeiboSearch.pipelines.WeiboSpiderPipeline',
+ 'WeiboSearch.pipelines.MongoPipeline']
+2020-02-04 13:19:34	scrapy.core.engine	INFO	Spider opened
+2020-02-04 13:19:34	scrapy.extensions.logstats	INFO	Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-02-04 13:19:34	scrapy.extensions.telnet	INFO	Telnet console listening on 127.0.0.1:6023
+2020-02-04 13:19:34	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 13:19:35	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E8%8D%B7%E8%AD%A6%E6%92%AD%E6%8A%A5%20%E6%AD%A6%E6%B1%89%E8%88%AA%E7%8F%AD&advancedfilter=1&starttime=20200101&endtime=20200102&sort=time&hasori=1> (referer: None)
+2020-02-04 14:04:49	scrapy.crawler	INFO	Received SIGINT, shutting down gracefully. Send again to force 
+2020-02-04 14:06:06	scrapy.utils.log	INFO	Scrapy 1.8.0 started (bot: WeiboSearch)
+2020-02-04 14:06:06	scrapy.utils.log	INFO	Versions: lxml 4.4.2.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.5 (default, Oct 25 2019, 10:52:18) - [Clang 4.0.1 (tags/RELEASE_401/final)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Darwin-19.3.0-x86_64-i386-64bit
+2020-02-04 14:06:06	scrapy.crawler	INFO	Overridden settings: {'BOT_NAME': 'WeiboSearch', 'DOWNLOAD_DELAY': 1, 'LOG_ENABLED': '0', 'NEWSPIDER_MODULE': 'WeiboSearch.spiders', 'RETRY_HTTP_CODES': [401, 403, 408, 414, 500, 502, 503, 504], 'SPIDER_MODULES': ['WeiboSearch.spiders']}
+2020-02-04 14:06:06	scrapy.extensions.telnet	INFO	Telnet Password: a2cf98747658b036
+2020-02-04 14:06:06	scrapy.middleware	INFO	Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-02-04 14:06:07	scrapy.middleware	INFO	Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'WeiboSearch.middlewares.CookiesMiddleware',
+ 'WeiboSearch.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-02-04 14:06:07	scrapy.middleware	INFO	Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-02-04 14:06:07	scrapy.middleware	INFO	Enabled item pipelines:
+['WeiboSearch.pipelines.TimePipeline',
+ 'WeiboSearch.pipelines.WeiboSpiderPipeline',
+ 'WeiboSearch.pipelines.MongoPipeline']
+2020-02-04 14:06:07	scrapy.core.engine	INFO	Spider opened
+2020-02-04 14:06:07	scrapy.extensions.logstats	INFO	Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-02-04 14:06:07	scrapy.extensions.telnet	INFO	Telnet console listening on 127.0.0.1:6023
+2020-02-04 14:06:07	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:06:08	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E8%8D%B7%E8%AD%A6%E6%92%AD%E6%8A%A5%20%E6%AD%A6%E6%B1%89%E8%88%AA%E7%8F%AD&advancedfilter=1&starttime=20200101&endtime=20200102&sort=time&hasori=1> (referer: None)
+2020-02-04 14:06:25	scrapy.crawler	INFO	Received SIGINT, shutting down gracefully. Send again to force 
+2020-02-04 14:18:51	scrapy.utils.log	INFO	Scrapy 1.8.0 started (bot: WeiboSearch)
+2020-02-04 14:18:51	scrapy.utils.log	INFO	Versions: lxml 4.4.2.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.5 (default, Oct 25 2019, 10:52:18) - [Clang 4.0.1 (tags/RELEASE_401/final)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Darwin-19.3.0-x86_64-i386-64bit
+2020-02-04 14:18:51	scrapy.crawler	INFO	Overridden settings: {'BOT_NAME': 'WeiboSearch', 'DOWNLOAD_DELAY': 1, 'LOG_ENABLED': '0', 'NEWSPIDER_MODULE': 'WeiboSearch.spiders', 'RETRY_HTTP_CODES': [401, 403, 408, 414, 500, 502, 503, 504], 'SPIDER_MODULES': ['WeiboSearch.spiders']}
+2020-02-04 14:18:51	scrapy.extensions.telnet	INFO	Telnet Password: 903be1712463e76e
+2020-02-04 14:18:51	scrapy.middleware	INFO	Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-02-04 14:18:52	scrapy.middleware	INFO	Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'WeiboSearch.middlewares.CookiesMiddleware',
+ 'WeiboSearch.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-02-04 14:18:52	scrapy.middleware	INFO	Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-02-04 14:18:52	scrapy.middleware	INFO	Enabled item pipelines:
+['WeiboSearch.pipelines.TimePipeline',
+ 'WeiboSearch.pipelines.WeiboSpiderPipeline',
+ 'WeiboSearch.pipelines.MongoPipeline']
+2020-02-04 14:18:52	scrapy.core.engine	INFO	Spider opened
+2020-02-04 14:18:52	scrapy.extensions.logstats	INFO	Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-02-04 14:18:52	scrapy.extensions.telnet	INFO	Telnet console listening on 127.0.0.1:6023
+2020-02-04 14:18:52	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:18:53	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E8%8D%B7%E8%AD%A6%E6%92%AD%E6%8A%A5%20%E6%AD%A6%E6%B1%89%E8%88%AA%E7%8F%AD&advancedfilter=1&starttime=20200101&endtime=20200102&sort=time&hasori=1> (referer: None)
+2020-02-04 14:25:54	scrapy.crawler	INFO	Received SIGINT, shutting down gracefully. Send again to force 
+2020-02-04 14:36:58	scrapy.utils.log	INFO	Scrapy 1.8.0 started (bot: WeiboSearch)
+2020-02-04 14:36:58	scrapy.utils.log	INFO	Versions: lxml 4.4.2.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.5 (default, Oct 25 2019, 10:52:18) - [Clang 4.0.1 (tags/RELEASE_401/final)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Darwin-19.3.0-x86_64-i386-64bit
+2020-02-04 14:36:58	scrapy.crawler	INFO	Overridden settings: {'BOT_NAME': 'WeiboSearch', 'DOWNLOAD_DELAY': 1, 'LOG_ENABLED': '0', 'NEWSPIDER_MODULE': 'WeiboSearch.spiders', 'RETRY_HTTP_CODES': [401, 403, 408, 414, 500, 502, 503, 504], 'SPIDER_MODULES': ['WeiboSearch.spiders']}
+2020-02-04 14:36:58	scrapy.extensions.telnet	INFO	Telnet Password: 62998762095bbf70
+2020-02-04 14:36:58	scrapy.middleware	INFO	Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-02-04 14:36:58	scrapy.middleware	INFO	Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'WeiboSearch.middlewares.CookiesMiddleware',
+ 'WeiboSearch.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-02-04 14:36:58	scrapy.middleware	INFO	Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-02-04 14:36:58	scrapy.middleware	INFO	Enabled item pipelines:
+['WeiboSearch.pipelines.TimePipeline',
+ 'WeiboSearch.pipelines.WeiboSpiderPipeline',
+ 'WeiboSearch.pipelines.MongoPipeline']
+2020-02-04 14:36:58	scrapy.core.engine	INFO	Spider opened
+2020-02-04 14:36:58	scrapy.extensions.logstats	INFO	Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-02-04 14:36:58	scrapy.extensions.telnet	INFO	Telnet console listening on 127.0.0.1:6023
+2020-02-04 14:36:58	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:36:59	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E8%8D%B7%E8%AD%A6%E6%92%AD%E6%8A%A5%20%E6%AD%A6%E6%B1%89%E8%88%AA%E7%8F%AD&advancedfilter=1&starttime=20200101&endtime=20200102&sort=time&hasori=1> (referer: None)
+2020-02-04 14:43:23	scrapy.crawler	INFO	Received SIGINT, shutting down gracefully. Send again to force 
+2020-02-04 14:43:39	scrapy.utils.log	INFO	Scrapy 1.8.0 started (bot: WeiboSearch)
+2020-02-04 14:43:39	scrapy.utils.log	INFO	Versions: lxml 4.4.2.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.5 (default, Oct 25 2019, 10:52:18) - [Clang 4.0.1 (tags/RELEASE_401/final)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Darwin-19.3.0-x86_64-i386-64bit
+2020-02-04 14:43:39	scrapy.crawler	INFO	Overridden settings: {'BOT_NAME': 'WeiboSearch', 'DOWNLOAD_DELAY': 1, 'LOG_ENABLED': '0', 'NEWSPIDER_MODULE': 'WeiboSearch.spiders', 'RETRY_HTTP_CODES': [401, 403, 408, 414, 500, 502, 503, 504], 'SPIDER_MODULES': ['WeiboSearch.spiders']}
+2020-02-04 14:43:39	scrapy.extensions.telnet	INFO	Telnet Password: 17bae5cbfa3b3031
+2020-02-04 14:43:39	scrapy.middleware	INFO	Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-02-04 14:43:40	scrapy.middleware	INFO	Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'WeiboSearch.middlewares.CookiesMiddleware',
+ 'WeiboSearch.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-02-04 14:43:40	scrapy.middleware	INFO	Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-02-04 14:43:40	scrapy.middleware	INFO	Enabled item pipelines:
+['WeiboSearch.pipelines.TimePipeline',
+ 'WeiboSearch.pipelines.WeiboSpiderPipeline',
+ 'WeiboSearch.pipelines.MongoPipeline']
+2020-02-04 14:43:40	scrapy.core.engine	INFO	Spider opened
+2020-02-04 14:43:40	scrapy.extensions.logstats	INFO	Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-02-04 14:43:40	scrapy.extensions.telnet	INFO	Telnet console listening on 127.0.0.1:6023
+2020-02-04 14:43:40	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:43:41	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89%20%E8%82%BA%E7%82%8E&advancedfilter=1&starttime=20200101&endtime=20200102&sort=time&hasori=1> (referer: None)
+2020-02-04 14:43:53	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89%20%E8%82%BA%E7%82%8E&advancedfilter=1&starttime=20200101&endtime=20200102&sort=time&hasori=1>
+{'crawled_at': '2020-02-04 14:43:53',
+ 'created_at': '2020-01-02 23:57',
+ 'favorite_count': 10,
+ 'id_str': '6220657601_InGajqsDc',
+ 'reply_count': 6,
+ 'retweet_count': 0,
+ 'source': 'iPhone客户端',
+ 'text': '#武汉肺炎疫情患者被要求继续留院#没生病的自然是好事但还是要多多预防不要觉得事不关己我前天也是这样事不关己的心态结果这两天病起来真的要命咳得停不下来嗓子呼呼的疼鼻子度到不能呼吸有时候就是说病就病了还是好好预防吧',
+ 'user': '6220657601',
+ 'username': '啰嗦的欧尼酱',
+ 'weibo_url': 'https://weibo.com/6220657601/InGajqsDc'}
+2020-02-04 14:44:13	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89%20%E8%82%BA%E7%82%8E&advancedfilter=1&starttime=20200101&endtime=20200102&sort=time&hasori=1>
+{'crawled_at': '2020-02-04 14:44:13',
+ 'created_at': '2020-01-02 23:54',
+ 'favorite_count': 5,
+ 'id_str': '2821638943_InG8Y7UAF',
+ 'reply_count': 6,
+ 'retweet_count': 3,
+ 'source': '九州微评超话',
+ 'text': '#九州微评[超话]#【#武汉肺炎疫情患者被要求继续留院治疗#家属：此前病人恢复良好】1月2日，武汉华南海鲜市场肺炎疫情持续引发关注。在武汉医疗救治中心，一位患者家属对@新京报称，患者经治疗恢复良好，但是30日晚上被通知继续留院治疗，“原本1号2号就可以出院”。该患者家属表示，目前无法探望。#不明原因肺炎患者转入传染病医院#http://t.cn/AisZaPoA',
+ 'user': '2821638943',
+ 'username': '九州微言',
+ 'weibo_url': 'https://weibo.com/2821638943/InG8Y7UAF'}
+2020-02-04 14:44:13	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:19	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89%20%E8%82%BA%E7%82%8E&advancedfilter=1&starttime=20200101&endtime=20200102&sort=time&hasori=1>
+{'crawled_at': '2020-02-04 14:44:19',
+ 'created_at': '2020-01-02 23:54',
+ 'favorite_count': 0,
+ 'id_str': '5586933121_InG8VdkI6',
+ 'image_url': 'http://wx3.sinaimg.cn/wap180/00666cwxgy1gainnj4y0dj30xc0hitbo.jpg',
+ 'reply_count': 0,
+ 'retweet_count': 0,
+ 'source': 'Android客户端',
+ 'text': '【陈肇始：香港暂未发现与武汉相关个案将每日公布监测数字】因应武汉出现不明原因肺炎个案，香港特区政府召开跨部门会议。食物及衞生局局长陈肇始在会后见记者时表示，香港暂时未发现与武汉相关的严重肺炎个案，为回应社会关注，当局将每日公布监测数字。#守护香港##香港#（香港文汇网）详情：http://t.cn/AisAEwa4',
+ 'user': '5586933121',
+ 'username': '从宇宙黑洞飞出火凤凰',
+ 'weibo_url': 'https://weibo.com/5586933121/InG8VdkI6'}
+2020-02-04 14:44:19	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:23	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89%20%E8%82%BA%E7%82%8E&advancedfilter=1&starttime=20200101&endtime=20200102&sort=time&hasori=1>
+{'crawled_at': '2020-02-04 14:44:23',
+ 'created_at': '2020-01-02 23:53',
+ 'favorite_count': 4,
+ 'id_str': '2139099440_InG8G6nFI',
+ 'image_url': 'http://wx3.sinaimg.cn/wap180/7f801130ly1gaindasstag209506aalj.gif',
+ 'reply_count': 1,
+ 'retweet_count': 0,
+ 'source': 'HUAWEI P20',
+ 'text': '被武汉肺炎搞得人心惶惶对号入座最近这波感冒挺严重的被浸润在流感病毒里感觉我也咳咳哼哼地悄然而至😷都要照顾好自己鸭身体健康最重要了',
+ 'user': '2139099440',
+ 'username': '小喻有点甜_',
+ 'weibo_url': 'https://weibo.com/2139099440/InG8G6nFI'}
+2020-02-04 14:44:23	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:28	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89%20%E8%82%BA%E7%82%8E&advancedfilter=1&starttime=20200101&endtime=20200102&sort=time&hasori=1>
+{'crawled_at': '2020-02-04 14:44:28',
+ 'created_at': '2020-01-02 23:49',
+ 'favorite_count': 0,
+ 'id_str': '6058299865_InG6N6lIe',
+ 'reply_count': 0,
+ 'retweet_count': 0,
+ 'source': 'HUAWEI P30 Pro',
+ 'text': '#武汉肺炎疫情患者被要求继续留院#渣浪想干嘛，谁买的热搜，武汉人民好得狠，该干嘛还是干嘛，生活一如既往',
+ 'user': '6058299865',
+ 'username': '盛娇1234',
+ 'weibo_url': 'https://weibo.com/6058299865/InG6N6lIe'}
+2020-02-04 14:44:28	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:28	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89%20%E8%82%BA%E7%82%8E&advancedfilter=1&starttime=20200101&endtime=20200102&sort=time&hasori=1>
+{'crawled_at': '2020-02-04 14:44:28',
+ 'created_at': '2020-01-02 23:42',
+ 'favorite_count': 6,
+ 'id_str': '2105172301_InG47zuMk',
+ 'image_url': 'http://wx3.sinaimg.cn/wap180/7d7a614dgy1gainb2yutlj20v90v3tbn.jpg',
+ 'reply_count': 0,
+ 'retweet_count': 0,
+ 'source': 'iPhone客户端',
+ 'text': '#武汉肺炎疫情患者被要求继续留院##社区工作#不明原因肺炎为同时具备以下4条，不能明确诊断为其它疾病的肺炎病例：1、发热（腋下体温≥38℃）；2、具有肺炎的影像学特征；3、发病早期白细胞总数降低或正常，或淋巴细胞分类计数减少；4、经规范抗菌药物治疗3－5天，病情无明显改善或呈进行性加重。曾暴发过的SARS、MERS以及人感染高致病性禽流感都属于不明原因肺炎之列。注意常开窗通风，勤洗手，打喷嚏、咳嗽要避开他人，不要和他人共用餐具毛巾等密切接触的物品。外出时尽量避免在人群密集、空气流通不畅的公共场所长时间逗留。如有疑似症状，请尽早就医。',
+ 'user': '2105172301',
+ 'username': '聚福园社区',
+ 'weibo_url': 'https://weibo.com/2105172301/InG47zuMk'}
+2020-02-04 14:44:28	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89%20%E8%82%BA%E7%82%8E&advancedfilter=1&starttime=20200101&endtime=20200102&sort=time&hasori=1>
+{'crawled_at': '2020-02-04 14:44:28',
+ 'created_at': '2020-01-02 23:42',
+ 'favorite_count': 351,
+ 'id_str': '5902444044_InG3YrCDu',
+ 'place': True,
+ 'reply_count': 57,
+ 'retweet_count': 1,
+ 'source': '小米8周年旗舰手机',
+ 'text': '#武汉肺炎疫情患者被要求继续留院#感觉网友们对着这个事件比武汉人更加重视我们吃喝玩乐一样没少，哈哈哈，还没啥戴口罩的，就算带也是女孩子，不要问是不是为了预防，一般都是没洗脸，没化妆，或者太冷了风大路上都没听别人讨论过这个事情，哈哈，稳得一批，淡定！！！',
+ 'user': '5902444044',
+ 'username': '免费占卜师沐沐',
+ 'weibo_url': 'https://weibo.com/5902444044/InG3YrCDu'}
+2020-02-04 14:44:28	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89%20%E8%82%BA%E7%82%8E&advancedfilter=1&starttime=20200101&endtime=20200102&sort=time&hasori=1>
+{'crawled_at': '2020-02-04 14:44:28',
+ 'created_at': '2020-01-02 23:41',
+ 'favorite_count': 6,
+ 'id_str': '2464718903_InG3wEaPK',
+ 'reply_count': 0,
+ 'retweet_count': 0,
+ 'source': '唯爱王源的小汤圆',
+ 'text': '#武汉肺炎疫情患者被要求继续留院#马上过年了希望大家都平平安安过年🙏🏻',
+ 'user': '2464718903',
+ 'username': '白苏也有小呆毛O',
+ 'weibo_url': 'https://weibo.com/2464718903/InG3wEaPK'}
+2020-02-04 14:44:28	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:28	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:28	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:28	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:28	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:28	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:28	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/6220657601/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89%20%E8%82%BA%E7%82%8E&advancedfilter=1&starttime=20200101&endtime=20200102&sort=time&hasori=1)
+2020-02-04 14:44:28	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/2821638943/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89%20%E8%82%BA%E7%82%8E&advancedfilter=1&starttime=20200101&endtime=20200102&sort=time&hasori=1)
+2020-02-04 14:44:29	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/2139099440/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89%20%E8%82%BA%E7%82%8E&advancedfilter=1&starttime=20200101&endtime=20200102&sort=time&hasori=1)
+2020-02-04 14:44:29	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:29	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:29	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:29	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/5586933121/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89%20%E8%82%BA%E7%82%8E&advancedfilter=1&starttime=20200101&endtime=20200102&sort=time&hasori=1)
+2020-02-04 14:44:29	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:30	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/5902444044/InG3YrCDu> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89%20%E8%82%BA%E7%82%8E&advancedfilter=1&starttime=20200101&endtime=20200102&sort=time&hasori=1)
+2020-02-04 14:44:30	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/5902444044/InG3YrCDu>
+{'crawled_at': '2020-02-04 14:44:30',
+ 'created_at': '2020-01-02 23:42',
+ 'favorite_count': 351,
+ 'id_str': '5902444044_InG3YrCDu',
+ 'place': '武汉·街道口',
+ 'reply_count': 57,
+ 'retweet_count': 1,
+ 'source': '小米8周年旗舰手机',
+ 'text': '#武汉肺炎疫情患者被要求继续留院#感觉网友们对着这个事件比武汉人更加重视我们吃喝玩乐一样没少，哈哈哈，还没啥戴口罩的，就算带也是女孩子，不要问是不是为了预防，一般都是没洗脸，没化妆，或者太冷了风大路上都没听别人讨论过这个事情，哈哈，稳得一批，淡定！！！',
+ 'user': '5902444044',
+ 'username': '免费占卜师沐沐',
+ 'weibo_url': 'https://weibo.com/5902444044/InG3YrCDu'}
+2020-02-04 14:44:32	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/5902444044/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89%20%E8%82%BA%E7%82%8E&advancedfilter=1&starttime=20200101&endtime=20200102&sort=time&hasori=1)
+2020-02-04 14:44:32	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:32	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/2105172301/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89%20%E8%82%BA%E7%82%8E&advancedfilter=1&starttime=20200101&endtime=20200102&sort=time&hasori=1)
+2020-02-04 14:44:32	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:33	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/6058299865/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89%20%E8%82%BA%E7%82%8E&advancedfilter=1&starttime=20200101&endtime=20200102&sort=time&hasori=1)
+2020-02-04 14:44:33	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:34	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/2464718903/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89%20%E8%82%BA%E7%82%8E&advancedfilter=1&starttime=20200101&endtime=20200102&sort=time&hasori=1)
+2020-02-04 14:44:35	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:36	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=2> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89%20%E8%82%BA%E7%82%8E&advancedfilter=1&starttime=20200101&endtime=20200102&sort=time&hasori=1)
+2020-02-04 14:44:36	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=2>
+{'crawled_at': '2020-02-04 14:44:36',
+ 'created_at': '2020-01-02 23:37',
+ 'favorite_count': 5,
+ 'id_str': '2283046623_InG2bjGwR',
+ 'reply_count': 0,
+ 'retweet_count': 0,
+ 'source': '微博 HTML5 版',
+ 'text': '内蒙鼠疫，兰州布病，武汉肺炎，扬大结核',
+ 'user': '2283046623',
+ 'username': '我要拯救全世界的小动物',
+ 'weibo_url': 'https://weibo.com/2283046623/InG2bjGwR'}
+2020-02-04 14:44:36	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=2>
+{'crawled_at': '2020-02-04 14:44:36',
+ 'created_at': '2020-01-02 23:37',
+ 'favorite_count': 5,
+ 'id_str': '5756671570_InG24zYlZ',
+ 'image_url': 'http://wx1.sinaimg.cn/wap180/006hApfsly1gaimzvawdcj30u0140q5t.jpg',
+ 'place': '黄冈·黄冈师范学院',
+ 'reply_count': 0,
+ 'retweet_count': 0,
+ 'source': 'nova4自拍极点全面屏',
+ 'text': '我的又一个新杯子，超好看的珐琅杯拍的有点丑嘎嘎谢谢哥哥给我的车厘子🍒和草莓🍓超级i哥哥武汉两日游终于结束了。没有得肺炎，也没有被人群踩死。黄冈真好。',
+ 'user': '5756671570',
+ 'username': '是崔路欣的垃圾回收站',
+ 'weibo_url': 'https://weibo.com/5756671570/InG24zYlZ'}
+2020-02-04 14:44:36	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=2>
+{'crawled_at': '2020-02-04 14:44:36',
+ 'created_at': '2020-01-02 23:35',
+ 'favorite_count': 1,
+ 'id_str': '5640881691_InG1i791K',
+ 'reply_count': 1,
+ 'retweet_count': 2,
+ 'source': '荣耀Play 让快更快',
+ 'text': '【#武汉肺炎疫情患者被要求继续留院治疗#家属：此前病人恢复良好】1月2日，武汉华南海鲜市场肺炎疫情持续引发关注。在武汉医疗救治中心，一位患者家属对@新京报称，患者经治疗恢复良好，但是30日晚上被通知继续留院治疗，“原本1号2号就可以出院”。该患者家属表示，目前无法探望。http://t.cn/AisZaPoA',
+ 'user': '5640881691',
+ 'username': '谷禾在线',
+ 'weibo_url': 'https://weibo.com/5640881691/InG1i791K'}
+2020-02-04 14:44:36	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=2>
+{'crawled_at': '2020-02-04 14:44:36',
+ 'created_at': '2020-01-02 23:34',
+ 'favorite_count': 0,
+ 'id_str': '6003634636_InG0Di2CP',
+ 'reply_count': 0,
+ 'retweet_count': 0,
+ 'text': '【对话#武汉病毒性肺炎患者#：发病十多天曾以为是感冒】1日，@新京报连线到目前正在医院中隔离治疗的黄勇（化名），他表示目前数十名患者都在一起进行治疗。黄勇称自己发病了十多天，一开始以为是感冒。另一患者家属梁丽（化名）说，患者被隔离治疗后还没被允许探望。紧急呼叫的秒拍视频',
+ 'user': '6003634636',
+ 'username': '小女子阿盼',
+ 'weibo_url': 'https://weibo.com/6003634636/InG0Di2CP'}
+2020-02-04 14:44:36	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=2>
+{'crawled_at': '2020-02-04 14:44:36',
+ 'created_at': '2020-01-02 23:33',
+ 'favorite_count': 10,
+ 'id_str': '3412509980_InG0ovxhc',
+ 'reply_count': 6,
+ 'retweet_count': 4,
+ 'source': 'iPhone客户端',
+ 'text': '#健康保卫战##武汉发现不明原因肺炎#【肺炎有哪些表现？】1.发烧畏寒怕冷，发热超过3天，最高达到40℃。2.喉咙不舒服喉咙干、痒、痛，小儿则可能表现为厌食。严重的会出现头痛，浑身酸痛，甚至呼吸急促。3.咳嗽病毒性肺炎多为阵发性咳嗽，并且多无痰，一般为干咳，而细菌性肺炎痰液较多，痰液多呈脓性，甚至可有颜色。4.身体无力肌肉酸痛，头痛，乏力，感觉浑身没劲。当身体出现这些症状，一定要及时去医院治疗。@微博健康养生',
+ 'user': '3412509980',
+ 'username': '邓连杰营养师',
+ 'weibo_url': 'https://weibo.com/3412509980/InG0ovxhc'}
+2020-02-04 14:44:36	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:36	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:36	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:36	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:36	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=2>
+{'crawled_at': '2020-02-04 14:44:36',
+ 'created_at': '2020-01-02 23:32',
+ 'favorite_count': 0,
+ 'id_str': '7285225236_InFZViVLK',
+ 'reply_count': 0,
+ 'retweet_count': 0,
+ 'source': 'iPhone客户端',
+ 'text': '#武汉肺炎疫情患者被要求继续留院#希望一场虚惊，患者都能平安出院',
+ 'user': '7285225236',
+ 'username': '消磨好时光',
+ 'weibo_url': 'https://weibo.com/7285225236/InFZViVLK'}
+2020-02-04 14:44:36	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=2>
+{'crawled_at': '2020-02-04 14:44:36',
+ 'created_at': '2020-01-02 23:31',
+ 'favorite_count': 10,
+ 'id_str': '6992223361_InFZteZE1',
+ 'image_url': 'http://wx1.sinaimg.cn/wap180/007DcEI9ly1gaimxk9uqyj30n00x3dn1.jpg',
+ 'place': '赣州·于都县',
+ 'reply_count': 8,
+ 'retweet_count': 0,
+ 'source': '想主刀的锤iPhone XR',
+ 'text': '#武汉肺炎疫情患者被要求继续留院#安全是第一位的！按要求行事，无规矩不成方圆！支持！',
+ 'user': '6992223361',
+ 'username': '骨科小锤子',
+ 'weibo_url': 'https://weibo.com/6992223361/InFZteZE1'}
+2020-02-04 14:44:36	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=2>
+{'crawled_at': '2020-02-04 14:44:36',
+ 'created_at': '2020-01-02 23:29',
+ 'favorite_count': 190,
+ 'id_str': '6425757731_InFYLvs7G',
+ 'reply_count': 17,
+ 'retweet_count': 3,
+ 'source': '小米9 SE',
+ 'text': '#武汉肺炎疫情患者被要求继续留院#我觉得不必人心惶惶，但是也真没必要宣扬“根本没啥人戴口罩，一点事儿没有”的心大言论，感觉很无知。戴口罩是保护自己同时也保护别人，利人利己，是面对疫情一种基本的防护措施。哪怕是普通感冒，被传染了也要身体不舒服好一阵子，小心一点总是好的不是吗？希望大家都健康平安。',
+ 'user': '6425757731',
+ 'username': '银河漫游指北',
+ 'weibo_url': 'https://weibo.com/6425757731/InFYLvs7G'}
+2020-02-04 14:44:36	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:36	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:36	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:36	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:36	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=2>
+{'crawled_at': '2020-02-04 14:44:36',
+ 'created_at': '2020-01-02 23:25',
+ 'favorite_count': 0,
+ 'id_str': '6276863417_InFXj3DIO',
+ 'reply_count': 0,
+ 'retweet_count': 0,
+ 'source': '一点资讯.网页版',
+ 'text': '【武汉8名散布肺炎疫情谣言者被查处】武汉8名散布肺炎疫情谣言者被查处（来自一点资讯）',
+ 'user': '6276863417',
+ 'username': '百姓社会聚焦',
+ 'weibo_url': 'https://weibo.com/6276863417/InFXj3DIO'}
+2020-02-04 14:44:37	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/u/6220657601> (referer: https://weibo.cn/6220657601/info)
+2020-02-04 14:44:37	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:37	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/u/6220657601>
+{'birthday': '1900-06-01',
+ 'brief_introduction': '啥时候能出门啊',
+ 'crawled_at': '2020-02-04 14:44:37',
+ 'fans_num': 166,
+ 'follows_num': 720,
+ 'gender': '男',
+ 'id': '6220657601',
+ 'name': '啰嗦的欧尼酱',
+ 'province': '其他',
+ 'tweets_num': 1648,
+ 'vip_level': '未开通'}
+2020-02-04 14:44:39	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/u/2821638943> (referer: https://weibo.cn/2821638943/info)
+2020-02-04 14:44:39	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:39	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/u/2821638943>
+{'authentication': '知名综艺博主',
+ 'birthday': '1978-11-15',
+ 'brief_introduction': '搭接国家主流媒体，发表主旋律新闻资讯，服务基层人民。业务联系：微博私信或者邮箱496142327@qq.com',
+ 'crawled_at': '2020-02-04 14:44:39',
+ 'fans_num': 27414,
+ 'follows_num': 2846,
+ 'gender': '男',
+ 'id': '2821638943',
+ 'labels': '历史,爱音乐,看电影',
+ 'name': '九州微言',
+ 'province': '海外',
+ 'tweets_num': 40907,
+ 'vip_level': '6级'}
+2020-02-04 14:44:40	scrapy.extensions.logstats	INFO	Crawled 13 pages (at 13 pages/min), scraped 20 items (at 20 items/min)
+2020-02-04 14:44:40	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/u/2139099440> (referer: https://weibo.cn/2139099440/info)
+2020-02-04 14:44:40	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/u/2139099440>
+{'birthday': '1998-05-06',
+ 'brief_introduction': '好好生活.',
+ 'crawled_at': '2020-02-04 14:44:40',
+ 'fans_num': 525,
+ 'follows_num': 201,
+ 'gender': '女',
+ 'id': '2139099440',
+ 'name': '小喻有点甜_',
+ 'province': '其他',
+ 'tweets_num': 1535,
+ 'vip_level': '2级'}
+2020-02-04 14:44:41	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/u/5586933121> (referer: https://weibo.cn/5586933121/info)
+2020-02-04 14:44:42	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/u/5586933121>
+{'city': '成都',
+ 'crawled_at': '2020-02-04 14:44:42',
+ 'fans_num': 13513,
+ 'follows_num': 270,
+ 'gender': '男',
+ 'id': '5586933121',
+ 'name': '从宇宙黑洞飞出火凤凰',
+ 'province': '四川',
+ 'tweets_num': 169146,
+ 'vip_level': '未开通'}
+2020-02-04 14:44:44	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/u/5902444044> (referer: https://weibo.cn/5902444044/info)
+2020-02-04 14:44:44	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/u/5902444044>
+{'birthday': '1995-08-26',
+ 'brief_introduction': '我家大嵩敲好看的，要一直pick你哟',
+ 'city': '武汉',
+ 'crawled_at': '2020-02-04 14:44:44',
+ 'fans_num': 3809,
+ 'follows_num': 563,
+ 'gender': '女',
+ 'id': '5902444044',
+ 'name': '免费占卜师沐沐',
+ 'province': '湖北',
+ 'tweets_num': 310,
+ 'vip_level': '6级'}
+2020-02-04 14:44:44	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/u/2105172301> (referer: https://weibo.cn/2105172301/info)
+2020-02-04 14:44:44	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/u/2105172301>
+{'authentication': '江苏省南京市鼓楼区江东街道聚福园社区官方微博',
+ 'birthday': '01-01',
+ 'brief_introduction': '聚福园社区隶属于江东街道，办公地点设在漓江路6号，联系电话86221615。',
+ 'city': '南京',
+ 'crawled_at': '2020-02-04 14:44:44',
+ 'fans_num': 1161,
+ 'follows_num': 125,
+ 'gender': '男',
+ 'id': '2105172301',
+ 'labels': '南京生活',
+ 'name': '聚福园社区',
+ 'province': '江苏',
+ 'tweets_num': 72158,
+ 'vip_level': '未开通'}
+2020-02-04 14:44:45	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/u/6058299865> (referer: https://weibo.cn/6058299865/info)
+2020-02-04 14:44:45	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/u/6058299865>
+{'brief_introduction': '纪念每天的心情',
+ 'city': '武汉',
+ 'crawled_at': '2020-02-04 14:44:45',
+ 'fans_num': 148,
+ 'follows_num': 840,
+ 'gender': '女',
+ 'id': '6058299865',
+ 'name': '盛娇1234',
+ 'province': '湖北',
+ 'tweets_num': 433,
+ 'vip_level': '2级'}
+2020-02-04 14:44:47	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/u/2464718903> (referer: https://weibo.cn/2464718903/info)
+2020-02-04 14:44:47	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/u/2464718903>
+{'authentication': '王源超话粉丝大咖 视频博主',
+ 'birthday': '摩羯座',
+ 'brief_introduction': '我觉得很舍不得你们 然后想要再 想要再加一首歌',
+ 'crawled_at': '2020-02-04 14:44:47',
+ 'fans_num': 12419,
+ 'follows_num': 562,
+ 'gender': '女',
+ 'id': '2464718903',
+ 'labels': '摩羯女,鹿晗',
+ 'name': '白苏也有小呆毛O',
+ 'province': '其他',
+ 'tweets_num': 7468,
+ 'vip_level': '4级'}
+2020-02-04 14:44:48	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/6003634636/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=2)
+2020-02-04 14:44:48	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:49	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/5640881691/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=2)
+2020-02-04 14:44:49	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:50	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/5756671570/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=2)
+2020-02-04 14:44:51	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:52	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/2283046623/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=2)
+2020-02-04 14:44:52	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:53	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/6425757731/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=2)
+2020-02-04 14:44:53	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:53	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/6992223361/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=2)
+2020-02-04 14:44:53	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:54	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/7285225236/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=2)
+2020-02-04 14:44:54	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:55	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/3412509980/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=2)
+2020-02-04 14:44:55	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:57	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/6276863417/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=2)
+2020-02-04 14:44:57	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:57	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=3> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=2)
+2020-02-04 14:44:57	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=3>
+{'crawled_at': '2020-02-04 14:44:57',
+ 'created_at': '2020-01-02 23:25',
+ 'favorite_count': 0,
+ 'id_str': '6276863417_InFXj3DIO',
+ 'reply_count': 0,
+ 'retweet_count': 0,
+ 'source': '一点资讯.网页版',
+ 'text': '【武汉8名散布肺炎疫情谣言者被查处】武汉8名散布肺炎疫情谣言者被查处（来自一点资讯）',
+ 'user': '6276863417',
+ 'username': '百姓社会聚焦',
+ 'weibo_url': 'https://weibo.com/6276863417/InFXj3DIO'}
+2020-02-04 14:44:57	scrapy.dupefilters	DEBUG	Filtered duplicate request: <GET https://weibo.cn/6276863417/info> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2020-02-04 14:44:57	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=3>
+{'crawled_at': '2020-02-04 14:44:57',
+ 'created_at': '2020-01-02 23:24',
+ 'favorite_count': 3,
+ 'id_str': '3818846748_InFWBjGUu',
+ 'reply_count': 0,
+ 'retweet_count': 2,
+ 'source': 'HUAWEI Mate 10',
+ 'text': '#武汉肺炎疫情患者被要求继续留院#常规型肺炎基本上是病毒引发，肺炎症状多无发热、咳痰等典型症状，也有少数有症状或无症状。首发症状为呼吸急促及呼吸困难，或有意识障碍、嗜睡、脱水、食欲减退等，依据病史及临床表现、体征，结合血常规检查及胸部X线检查有助诊断，痰培养连续2次分离出相同病原菌可确诊，一起看视频了解下http://t.cn/AiDc3wme',
+ 'user': '3818846748',
+ 'username': '芜湖检察',
+ 'weibo_url': 'https://weibo.com/3818846748/InFWBjGUu'}
+2020-02-04 14:44:57	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=3>
+{'crawled_at': '2020-02-04 14:44:57',
+ 'created_at': '2020-01-02 23:23',
+ 'favorite_count': 0,
+ 'id_str': '5623551596_InFWdEOhK',
+ 'image_url': 'http://wx1.sinaimg.cn/wap180/0068zQF6gy1gaimqwzv08g304605m458.gif',
+ 'place': '武汉',
+ 'reply_count': 1,
+ 'retweet_count': 0,
+ 'source': 'iPhone客户端',
+ 'text': '#武汉发现不明原因肺炎##武汉肺炎疫情患者被要求继续留院#害该你死的时候你戴一百层😷都活不了不该你死的时候你张着嘴巴裸奔都没事真的别不信！总之相信国家相信zf别传谣也别害怕别忘了消除恐惧的最好办法是面对恐惧',
+ 'user': '5623551596',
+ 'username': '和香港比香',
+ 'weibo_url': 'https://weibo.com/5623551596/InFWdEOhK'}
+2020-02-04 14:44:57	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=3>
+{'crawled_at': '2020-02-04 14:44:57',
+ 'created_at': '2020-01-02 23:23',
+ 'favorite_count': 0,
+ 'id_str': '7319074823_InFW9xmSz',
+ 'image_url': 'http://wx2.sinaimg.cn/wap180/007Zk5HVly1gaggy70ej1j306808uglg.jpg',
+ 'reply_count': 0,
+ 'retweet_count': 0,
+ 'source': '微博 weibo.com',
+ 'text': '褚在什么地方，一定回去找的。哪怕知道#小草哥哥777#我给他们设了陷阱，他们也#武汉发现不明原因肺炎#',
+ 'user': '7319074823',
+ 'username': '多尔衮冰蓝窃',
+ 'weibo_url': 'https://weibo.com/7319074823/InFW9xmSz'}
+2020-02-04 14:44:57	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:58	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:58	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=3>
+{'crawled_at': '2020-02-04 14:44:58',
+ 'created_at': '2020-01-02 23:22',
+ 'favorite_count': 0,
+ 'id_str': '6463753619_InFVJeU59',
+ 'reply_count': 0,
+ 'retweet_count': 1,
+ 'source': '政法君的iPhone客户端',
+ 'text': '#武汉肺炎疫情患者被要求继续留院#常规型肺炎基本上是病毒引发，肺炎症状多无发热、咳痰等典型症状，也有少数有症状或无症状。首发症状为呼吸急促及呼吸困难，或有意识障碍、嗜睡、脱水、食欲减退等，依据病史及临床表现、体征，结合血常规检查及胸部X线检查有助诊断，痰培养连续2次分离出相同病原菌可确诊，一起看视频了解下http://t.cn/AiDc3wmehttp://t.cn/AiDc3wme',
+ 'user': '6463753619',
+ 'username': '运城政法',
+ 'weibo_url': 'https://weibo.com/6463753619/InFVJeU59'}
+2020-02-04 14:44:58	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=3>
+{'crawled_at': '2020-02-04 14:44:58',
+ 'created_at': '2020-01-02 23:21',
+ 'favorite_count': 0,
+ 'id_str': '1336449821_InFVljZBk',
+ 'image_url': 'http://wx4.sinaimg.cn/wap180/4fa89b1dly1gaimoozjtqj20qo0gngnu.jpg',
+ 'reply_count': 0,
+ 'retweet_count': 0,
+ 'source': '内置浏览器',
+ 'text': '武汉不明原因肺炎患者转入传染病医院，市场附近有居民感染武汉不明原因肺炎患者转入传染病医院，市场附近有居民感染',
+ 'user': '1336449821',
+ 'username': '动物故事大王马文秋',
+ 'weibo_url': 'https://weibo.com/1336449821/InFVljZBk'}
+2020-02-04 14:44:58	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=3>
+{'crawled_at': '2020-02-04 14:44:58',
+ 'created_at': '2020-01-02 23:20',
+ 'favorite_count': 9,
+ 'id_str': '5637416029_InFVghT8N',
+ 'image_url': 'http://wx2.sinaimg.cn/wap180/0069w1qZly1gaimohdzu1j30v91vpws1.jpg',
+ 'place': '天津·河北工业大学',
+ 'reply_count': 6,
+ 'retweet_count': 1,
+ 'source': '荦荦家的iPhone X',
+ 'text': '#武汉肺炎疫情患者被要求继续留院#希望一切都好吧🙏今天跟妈妈说起来来着，虽然有3m但是一想到两个多小时戴着实在难受又去门口买了轻便一点的😷我妈根本不用担心我跟别人讲话啊我都是上了飞机就开始睡降落就醒来着Anyway后天我就滚回家了🏃♀️',
+ 'user': '5637416029',
+ 'username': '执小荦',
+ 'weibo_url': 'https://weibo.com/5637416029/InFVghT8N'}
+2020-02-04 14:44:58	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:58	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:58	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:58	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=3>
+{'crawled_at': '2020-02-04 14:44:58',
+ 'created_at': '2020-01-02 23:20',
+ 'favorite_count': 0,
+ 'id_str': '5292260428_InFVedvFK',
+ 'reply_count': 0,
+ 'retweet_count': 0,
+ 'source': 'Android',
+ 'text': '#急救车出诊人员遭患者同伴捅伤##武汉发现不明原因肺炎##不明原因肺炎患者转入传染病医院#咱们关联一下，接着看。无话可说，朋友圈很多各种形式。我们都该被伤害吗？@哇是花花呀',
+ 'user': '5292260428',
+ 'username': 'balance824',
+ 'weibo_url': 'https://weibo.com/5292260428/InFVedvFK'}
+2020-02-04 14:44:58	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=3>
+{'crawled_at': '2020-02-04 14:44:58',
+ 'created_at': '2020-01-02 23:19',
+ 'favorite_count': 4,
+ 'id_str': '2359224985_InFUOfh0D',
+ 'reply_count': 3,
+ 'retweet_count': 3,
+ 'source': 'Android',
+ 'text': '【最新！#武汉不明原因肺炎患者转入传染病医院#市场附近居民感染肺炎】1月2日，据新京报报道，华南海鲜市场附近小区有居民也感染了不明原因肺炎，目前已进入传染病医院隔离治疗。武汉华南海鲜市场不明原因肺炎事件持续引发公众关注。相关患者已于2019年12月31日转入武汉市一家突发公共卫生事件医疗救治定点医院、也是一家传染病专科医院——金银潭医院进行隔离治疗，外人和家属一律不得探视。有患者表示，其病情已无大碍，希望外界不用再担心。http://t.cn/Ais2qbFa',
+ 'user': '2359224985',
+ 'username': '青岛晚报',
+ 'weibo_url': 'https://weibo.com/2359224985/InFUOfh0D'}
+2020-02-04 14:44:58	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=3>
+{'crawled_at': '2020-02-04 14:44:58',
+ 'created_at': '2020-01-02 23:18',
+ 'favorite_count': 7,
+ 'id_str': '6969937773_InFU9q9fk',
+ 'reply_count': 5,
+ 'retweet_count': 0,
+ 'source': '前后2000万 OPPO R11',
+ 'text': '#武汉肺炎疫情患者被要求继续留院#我们都挺好我在华南这里上学我都很好谢谢关心地域黑真的没有必要了',
+ 'user': '6969937773',
+ 'username': '吃喝玩乐选手',
+ 'weibo_url': 'https://weibo.com/6969937773/InFU9q9fk'}
+2020-02-04 14:44:58	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:58	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:59	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/u/6003634636> (referer: https://weibo.cn/6003634636/info)
+2020-02-04 14:44:59	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:44:59	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/u/6003634636>
+{'authentication': '历史博主',
+ 'birthday': '1996-07-28',
+ 'brief_introduction': '歌声与微笑',
+ 'city': '石家庄',
+ 'crawled_at': '2020-02-04 14:44:59',
+ 'fans_num': 432353,
+ 'follows_num': 102,
+ 'gender': '女',
+ 'id': '6003634636',
+ 'name': '小女子阿盼',
+ 'province': '河北',
+ 'tweets_num': 7823,
+ 'vip_level': '5级'}
+2020-02-04 14:45:00	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/u/5640881691> (referer: https://weibo.cn/5640881691/info)
+2020-02-04 14:45:00	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:00	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/u/5640881691>
+{'authentication': '延安新闻超话主持人 资讯视频自媒体',
+ 'birthday': '1979-10-04',
+ 'crawled_at': '2020-02-04 14:45:00',
+ 'fans_num': 20589,
+ 'follows_num': 1365,
+ 'gender': '男',
+ 'id': '5640881691',
+ 'labels': '新闻资讯',
+ 'name': '谷禾在线',
+ 'province': '其他',
+ 'tweets_num': 897,
+ 'vip_level': '5级'}
+2020-02-04 14:45:02	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/u/5756671570> (referer: https://weibo.cn/5756671570/info)
+2020-02-04 14:45:02	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:02	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/u/5756671570>
+{'birthday': '金牛座',
+ 'crawled_at': '2020-02-04 14:45:02',
+ 'fans_num': 42,
+ 'follows_num': 72,
+ 'gender': '女',
+ 'id': '5756671570',
+ 'name': '是崔路欣的垃圾回收站',
+ 'province': '其他',
+ 'tweets_num': 12,
+ 'vip_level': '1级'}
+2020-02-04 14:45:03	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/u/2283046623> (referer: https://weibo.cn/2283046623/info)
+2020-02-04 14:45:03	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/u/2283046623>
+{'birthday': '1994-06-23',
+ 'brief_introduction': '世间美好与你环环相扣💗️',
+ 'crawled_at': '2020-02-04 14:45:03',
+ 'fans_num': 521,
+ 'follows_num': 234,
+ 'gender': '女',
+ 'id': '2283046623',
+ 'name': '我要拯救全世界的小动物',
+ 'province': '其他',
+ 'tweets_num': 1519,
+ 'vip_level': '未开通'}
+2020-02-04 14:45:03	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/u/6425757731> (referer: https://weibo.cn/6425757731/info)
+2020-02-04 14:45:03	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/u/6425757731>
+{'brief_introduction': '生科🐶树洞',
+ 'crawled_at': '2020-02-04 14:45:03',
+ 'fans_num': 130,
+ 'follows_num': 550,
+ 'gender': '男',
+ 'id': '6425757731',
+ 'name': '银河漫游指北',
+ 'province': '青海',
+ 'tweets_num': 3571,
+ 'vip_level': '未开通'}
+2020-02-04 14:45:06	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/u/7285225236> (referer: https://weibo.cn/7285225236/info)
+2020-02-04 14:45:06	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/u/7285225236>
+{'birthday': '摩羯座',
+ 'crawled_at': '2020-02-04 14:45:06',
+ 'fans_num': 2,
+ 'follows_num': 28,
+ 'gender': '男',
+ 'id': '7285225236',
+ 'name': '消磨好时光',
+ 'province': '其他',
+ 'tweets_num': 578,
+ 'vip_level': '未开通'}
+2020-02-04 14:45:06	scrapy.downloadermiddlewares.redirect	DEBUG	Redirecting (meta refresh) to <GET https://weibo.cn/u/5756671570?rand=924101> from <GET https://weibo.cn/u/6992223361>
+2020-02-04 14:45:06	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:07	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/u/3412509980> (referer: https://weibo.cn/3412509980/info)
+2020-02-04 14:45:07	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/u/3412509980>
+{'authentication': '郑州市营养协会 营养师',
+ 'birthday': '1980-10-20',
+ 'brief_introduction': '小时候的梦想是当老师或者大夫，结果我做了营养师。爱知识、爱沉默、多年如一每天学习两小时，将中医、西医、营养揉合到一起。付出更快乐！',
+ 'city': '郑州',
+ 'crawled_at': '2020-02-04 14:45:07',
+ 'fans_num': 153026,
+ 'follows_num': 1273,
+ 'gender': '女',
+ 'id': '3412509980',
+ 'labels': '中医养生,营养与健康,美食',
+ 'name': '邓连杰营养师',
+ 'province': '河南',
+ 'tweets_num': 8725,
+ 'vip_level': '1级'}
+2020-02-04 14:45:08	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/u/6276863417> (referer: https://weibo.cn/6276863417/info)
+2020-02-04 14:45:08	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/u/6276863417>
+{'birthday': '狮子座',
+ 'brief_introduction': '用犀利的笔锋，描绘社会是非曲直；用规范的角度阐述社会发展的蓝图；用专业的法律途径，解释法治理念的进步！',
+ 'city': '石景山区',
+ 'crawled_at': '2020-02-04 14:45:08',
+ 'fans_num': 50,
+ 'follows_num': 506,
+ 'gender': '女',
+ 'id': '6276863417',
+ 'labels': '怀旧,拍照,书',
+ 'name': '百姓社会聚焦',
+ 'province': '北京',
+ 'tweets_num': 625,
+ 'vip_level': '2级'}
+2020-02-04 14:45:10	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/5623551596/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=3)
+2020-02-04 14:45:10	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/3818846748/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=3)
+2020-02-04 14:45:10	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:11	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:12	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/1336449821/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=3)
+2020-02-04 14:45:12	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:13	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/6463753619/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=3)
+2020-02-04 14:45:13	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:15	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/7319074823/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=3)
+2020-02-04 14:45:15	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:16	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/6969937773/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=3)
+2020-02-04 14:45:16	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:16	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/2359224985/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=3)
+2020-02-04 14:45:17	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:19	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/5292260428/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=3)
+2020-02-04 14:45:19	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:19	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/5637416029/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=3)
+2020-02-04 14:45:19	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:21	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=4> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=3)
+2020-02-04 14:45:21	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=4>
+{'crawled_at': '2020-02-04 14:45:21',
+ 'created_at': '2020-01-02 23:16',
+ 'favorite_count': 10,
+ 'id_str': '1788237307_InFTnhdQq',
+ 'reply_count': 0,
+ 'retweet_count': 2,
+ 'source': 'iPhone客户端',
+ 'text': '#武汉肺炎疫情患者被要求继续留院#不明原因肺炎为同时具备以下4条，不能明确诊断为其它疾病的肺炎病例：1、发热（腋下体温≥38℃）；2、具有肺炎的影像学特征；3、发病早期白细胞总数降低或正常，或淋巴细胞分类计数减少；4、经规范抗菌药物治疗3－5天，病情无明显改善或呈进行性加重。曾暴发过的SARS、MERS以及人感染高致病性禽流感都属于不明原因肺炎之列。注意常开窗通风，勤洗手，打喷嚏、咳嗽要避开他人，不要和他人共用餐具毛巾等密切接触的物品。外出时尽量避免在人群密集、空气流通不畅的公共场所长时间逗留。如有疑似症状，请尽早就医。',
+ 'user': '1788237307',
+ 'username': '注册营养师熊家豪',
+ 'weibo_url': 'https://weibo.com/1788237307/InFTnhdQq'}
+2020-02-04 14:45:21	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=4>
+{'crawled_at': '2020-02-04 14:45:21',
+ 'created_at': '2020-01-02 23:15',
+ 'favorite_count': 0,
+ 'id_str': '2162332023_InFSVuyMu',
+ 'reply_count': 0,
+ 'retweet_count': 0,
+ 'source': 'iPhone客户端',
+ 'text': '#武汉肺炎疫情患者被要求继续留院#',
+ 'user': '2162332023',
+ 'username': 'PunchMyself',
+ 'weibo_url': 'https://weibo.com/2162332023/InFSVuyMu'}
+2020-02-04 14:45:21	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=4>
+{'crawled_at': '2020-02-04 14:45:21',
+ 'created_at': '2020-01-02 23:15',
+ 'favorite_count': 11,
+ 'id_str': '2719535640_InFSTq7If',
+ 'reply_count': 0,
+ 'retweet_count': 0,
+ 'source': '超好运iPhone 7 Plus',
+ 'text': '#武汉肺炎疫情患者被要求继续留院#武汉人怎么了，武汉那么大，一个小小的华南咋的你们这些地域黑了。如果真有大事，武汉还能每天这么平静吗？',
+ 'user': '2719535640',
+ 'username': '走路不打字',
+ 'weibo_url': 'https://weibo.com/2719535640/InFSTq7If'}
+2020-02-04 14:45:21	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=4>
+{'crawled_at': '2020-02-04 14:45:21',
+ 'created_at': '2020-01-02 23:14',
+ 'favorite_count': 1,
+ 'id_str': '6704489523_InFSED95k',
+ 'image_url': 'http://wx3.sinaimg.cn/wap180/007jJlZNly1gaimch0zctj32yo2807wl.jpg',
+ 'place': True,
+ 'reply_count': 3,
+ 'retweet_count': 0,
+ 'source': 'iPhone客户端',
+ 'text': '#武汉肺炎疫情患者被要求继续留院#这是传疫情最严重的那天晚上，江汉路超多人，大家欢欢喜喜跨年，丝毫没有受传闻中的疫情影响。我不是武汉人，但是在这里工作了一年多，对武汉的感觉还是挺好的，看到那些地域黑的喷子，真的是很无语，首先，发生这件事，是谁都不想的，既然已经发生，我们应该一起面对，而不是冷嘲热讽。同时，控制舆论总的来说是正确的，官方在给我们信心，同时我们自己也要有信心，相信一切都会好起来，大家照顾好自己就好了',
+ 'user': '6704489523',
+ 'username': '如风过境lili',
+ 'weibo_url': 'https://weibo.com/6704489523/InFSED95k'}
+2020-02-04 14:45:21	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=4>
+{'crawled_at': '2020-02-04 14:45:21',
+ 'created_at': '2020-01-02 23:13',
+ 'favorite_count': 6,
+ 'id_str': '6008483913_InFSlq8xh',
+ 'reply_count': 6,
+ 'retweet_count': 8,
+ 'source': 'iPhone客户端',
+ 'text': '#武汉肺炎疫情患者被要求继续留院#常规型肺炎基本上是病毒引发，肺炎症状多无发热、咳痰等典型症状，也有少数有症状或无症状。首发症状为呼吸急促及呼吸困难，或有意识障碍、嗜睡、脱水、食欲减退等，依据病史及临床表现、体征，结合血常规检查及胸部X线检查有助诊断，痰培养连续2次分离出相同病原菌可确诊，一起看视频了解下http://t.cn/AiDc3wme',
+ 'user': '6008483913',
+ 'username': '山西政法',
+ 'weibo_url': 'https://weibo.com/6008483913/InFSlq8xh'}
+2020-02-04 14:45:21	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:21	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:21	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:21	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:21	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:21	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=4>
+{'crawled_at': '2020-02-04 14:45:21',
+ 'created_at': '2020-01-02 23:10',
+ 'favorite_count': 0,
+ 'id_str': '1082724551_InFQWBwEJ',
+ 'reply_count': 0,
+ 'retweet_count': 0,
+ 'source': '微博 weibo.com',
+ 'text': '问武汉的朋友：你们那里肺炎的事情怎么样？有消息没，你不怕吗？他说：个斑马，从1号开始武汉全面禁烟了，只要室内都禁止吸烟，熬死个人了！我说：在生与死的问题面前，你居然还是放不下抽烟。',
+ 'user': '1082724551',
+ 'username': '洋芋坨坨和勺子怪',
+ 'weibo_url': 'https://weibo.com/1082724551/InFQWBwEJ'}
+2020-02-04 14:45:21	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=4>
+{'crawled_at': '2020-02-04 14:45:21',
+ 'created_at': '2020-01-02 23:09',
+ 'favorite_count': 0,
+ 'id_str': '6283355517_InFQLCCje',
+ 'reply_count': 0,
+ 'retweet_count': 0,
+ 'source': 'iPhone X',
+ 'text': '#武汉肺炎疫情患者被要求继续留院#警惕一点没什么错，力挺医院。',
+ 'user': '6283355517',
+ 'username': '2020年第二次修改昵称',
+ 'weibo_url': 'https://weibo.com/6283355517/InFQLCCje'}
+2020-02-04 14:45:21	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=4>
+{'crawled_at': '2020-02-04 14:45:21',
+ 'created_at': '2020-01-02 23:08',
+ 'favorite_count': 0,
+ 'id_str': '1720761402_InFQgldQ9',
+ 'reply_count': 0,
+ 'retweet_count': 0,
+ 'source': '草莓Android',
+ 'text': '#不明原因肺炎患者转入传染病医院#好可怕，武汉的朋友真的要带好口罩，出入洗手消毒。',
+ 'user': '1720761402',
+ 'username': '草莓牛奶团团',
+ 'weibo_url': 'https://weibo.com/1720761402/InFQgldQ9'}
+2020-02-04 14:45:21	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:22	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/u/5756671570?rand=924101> (referer: https://weibo.cn/6992223361/info)
+2020-02-04 14:45:22	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:22	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/u/5756671570?rand=924101>
+{'authentication': '知名健康博主 锤哥聊骨科超话主持人 微博故事原创作者 新鲜事作者 头条文章作者',
+ 'birthday': '1988-11-11',
+ 'brief_introduction': '不想主刀的锤子🔨不是好医生！不断的学习，才是最高尚的医德！',
+ 'crawled_at': '2020-02-04 14:45:22',
+ 'fans_num': 43,
+ 'follows_num': 73,
+ 'gender': '男',
+ 'id': '6992223361',
+ 'name': '骨科小锤子',
+ 'province': '广东',
+ 'tweets_num': 13,
+ 'vip_level': '3级'}
+2020-02-04 14:45:24	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/u/5623551596> (referer: https://weibo.cn/5623551596/info)
+2020-02-04 14:45:24	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:24	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/u/5623551596>
+{'birthday': '1991-11-11',
+ 'brief_introduction': '关注必回，有事儿私信',
+ 'city': '武汉',
+ 'crawled_at': '2020-02-04 14:45:24',
+ 'fans_num': 75,
+ 'follows_num': 120,
+ 'gender': '男',
+ 'id': '5623551596',
+ 'labels': '搞笑幽默',
+ 'name': '和香港比香',
+ 'province': '湖北',
+ 'tweets_num': 33,
+ 'vip_level': '1级'}
+2020-02-04 14:45:24	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/u/3818846748> (referer: https://weibo.cn/3818846748/info)
+2020-02-04 14:45:24	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:25	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/u/3818846748>
+{'authentication': '安徽省芜湖市人民检察院官方微博',
+ 'brief_introduction': '芜湖市人民检察院诚请广大网友监督支持芜湖检察工作。',
+ 'city': '芜湖',
+ 'crawled_at': '2020-02-04 14:45:25',
+ 'fans_num': 14179,
+ 'follows_num': 1295,
+ 'gender': '男',
+ 'id': '3818846748',
+ 'labels': '法律监督,控告申诉,审查起诉',
+ 'name': '芜湖检察',
+ 'province': '安徽',
+ 'tweets_num': 6490,
+ 'vip_level': '3级'}
+2020-02-04 14:45:25	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/u/1336449821> (referer: https://weibo.cn/1336449821/info)
+2020-02-04 14:45:25	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:25	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/u/1336449821>
+{'authentication': '作家马文秋，代表作《中国野生动物传奇》',
+ 'brief_introduction': '自然文学作家，中国科普作家协会会员.发表作品200多万字,已出版个人专著,&lt',
+ 'city': '石家庄',
+ 'crawled_at': '2020-02-04 14:45:25',
+ 'fans_num': 18376,
+ 'follows_num': 588,
+ 'gender': '男',
+ 'id': '1336449821',
+ 'labels': '文学,石家庄生活,旅游摄影',
+ 'name': '动物故事大王马文秋',
+ 'province': '河北',
+ 'sex_orientation': '异性恋',
+ 'tweets_num': 3264,
+ 'vip_level': '2级'}
+2020-02-04 14:45:27	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/u/6463753619> (referer: https://weibo.cn/6463753619/info)
+2020-02-04 14:45:27	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/u/6463753619>
+{'authentication': '中共运城市委政法委员会官方微博',
+ 'brief_introduction': '讲述政法故事，弘扬法治精神。',
+ 'crawled_at': '2020-02-04 14:45:27',
+ 'fans_num': 26526,
+ 'follows_num': 156,
+ 'gender': '男',
+ 'id': '6463753619',
+ 'name': '运城政法',
+ 'province': '山西',
+ 'tweets_num': 8293,
+ 'vip_level': '4级'}
+2020-02-04 14:45:28	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/u/7319074823> (referer: https://weibo.cn/7319074823/info)
+2020-02-04 14:45:28	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/u/7319074823>
+{'birthday': '1998-11-28',
+ 'crawled_at': '2020-02-04 14:45:28',
+ 'fans_num': 5,
+ 'follows_num': 76,
+ 'gender': '男',
+ 'id': '7319074823',
+ 'name': '多尔衮冰蓝窃',
+ 'province': '黑龙江',
+ 'tweets_num': 167,
+ 'vip_level': '未开通'}
+2020-02-04 14:45:30	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/u/6969937773> (referer: https://weibo.cn/6969937773/info)
+2020-02-04 14:45:30	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/u/6969937773>
+{'birthday': '2000-09-04',
+ 'brief_introduction': '当颗星星 有棱有角 还会发光',
+ 'crawled_at': '2020-02-04 14:45:30',
+ 'fans_num': 604,
+ 'follows_num': 592,
+ 'gender': '女',
+ 'id': '6969937773',
+ 'name': '吃喝玩乐选手',
+ 'province': '其他',
+ 'tweets_num': 4053,
+ 'vip_level': '2级'}
+2020-02-04 14:45:31	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/u/2359224985> (referer: https://weibo.cn/2359224985/info)
+2020-02-04 14:45:31	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/u/2359224985>
+{'authentication': '青岛晚报官方微博',
+ 'birthday': '0001-00-00',
+ 'brief_introduction': '青岛晚报 关键词：一报在家，其乐融融，二十二年真诚相伴，传递人间真爱',
+ 'city': '青岛',
+ 'crawled_at': '2020-02-04 14:45:31',
+ 'fans_num': 2534832,
+ 'follows_num': 2633,
+ 'gender': '男',
+ 'id': '2359224985',
+ 'labels': '青岛生活',
+ 'name': '青岛晚报',
+ 'province': '山东',
+ 'tweets_num': 86134,
+ 'vip_level': '3级'}
+2020-02-04 14:45:32	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/u/5292260428> (referer: https://weibo.cn/5292260428/info)
+2020-02-04 14:45:33	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/u/5292260428>
+{'birthday': '1993-11-10',
+ 'brief_introduction': '空谈误国，实干兴邦 666666……',
+ 'city': '海淀区',
+ 'crawled_at': '2020-02-04 14:45:32',
+ 'fans_num': 208,
+ 'follows_num': 228,
+ 'gender': '女',
+ 'id': '5292260428',
+ 'name': 'balance824',
+ 'province': '北京',
+ 'tweets_num': 3838,
+ 'vip_level': '未开通'}
+2020-02-04 14:45:34	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/u/5637416029> (referer: https://weibo.cn/5637416029/info)
+2020-02-04 14:45:34	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/u/5637416029>
+{'birthday': '双子座',
+ 'brief_introduction': '日头没有辜负我们，我们也切莫辜负日头。',
+ 'crawled_at': '2020-02-04 14:45:34',
+ 'fans_num': 320,
+ 'follows_num': 557,
+ 'gender': '女',
+ 'id': '5637416029',
+ 'labels': '音乐,北京,德国',
+ 'name': '执小荦',
+ 'province': '天津',
+ 'tweets_num': 1339,
+ 'vip_level': '3级'}
+2020-02-04 14:45:35	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/6704489523/InFSED95k> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=4)
+2020-02-04 14:45:35	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/6704489523/InFSED95k>
+{'crawled_at': '2020-02-04 14:45:35',
+ 'created_at': '2020-01-02 23:14',
+ 'favorite_count': 1,
+ 'id_str': '6704489523_InFSED95k',
+ 'image_url': 'http://wx3.sinaimg.cn/wap180/007jJlZNly1gaimch0zctj32yo2807wl.jpg',
+ 'place': '武汉·庙山',
+ 'reply_count': 3,
+ 'retweet_count': 0,
+ 'source': 'iPhone客户端',
+ 'text': '#武汉肺炎疫情患者被要求继续留院#这是传疫情最严重的那天晚上，江汉路超多人，大家欢欢喜喜跨年，丝毫没有受传闻中的疫情影响。我不是武汉人，但是在这里工作了一年多，对武汉的感觉还是挺好的，看到那些地域黑的喷子，真的是很无语，首先，发生这件事，是谁都不想的，既然已经发生，我们应该一起面对，而不是冷嘲热讽。同时，控制舆论总的来说是正确的，官方在给我们信心，同时我们自己也要有信心，相信一切都会好起来，大家照顾好自己就好了',
+ 'user': '6704489523',
+ 'username': '如风过境lili',
+ 'weibo_url': 'https://weibo.com/6704489523/InFSED95k'}
+2020-02-04 14:45:36	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/6704489523/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=4)
+2020-02-04 14:45:36	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:38	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/2719535640/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=4)
+2020-02-04 14:45:38	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:38	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/2162332023/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=4)
+2020-02-04 14:45:39	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:39	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/1788237307/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=4)
+2020-02-04 14:45:39	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:40	scrapy.extensions.logstats	INFO	Crawled 62 pages (at 49 pages/min), scraped 63 items (at 43 items/min)
+2020-02-04 14:45:42	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/6283355517/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=4)
+2020-02-04 14:45:42	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:44	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/1720761402/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=4)
+2020-02-04 14:45:44	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:44	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/1082724551/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=4)
+2020-02-04 14:45:44	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:46	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/6008483913/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=4)
+2020-02-04 14:45:46	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:46	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=5> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=4)
+2020-02-04 14:45:47	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=5>
+{'crawled_at': '2020-02-04 14:45:47',
+ 'created_at': '2020-01-02 23:06',
+ 'favorite_count': 0,
+ 'id_str': '7336982815_InFPqjkZZ',
+ 'reply_count': 0,
+ 'retweet_count': 0,
+ 'source': 'Weibo.intl',
+ 'text': '#武漢肺炎疫情患者被要求繼續留院#密切关注',
+ 'user': '7336982815',
+ 'username': '妖丶心倦了泪也干了',
+ 'weibo_url': 'https://weibo.com/7336982815/InFPqjkZZ'}
+2020-02-04 14:45:47	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=5>
+{'crawled_at': '2020-02-04 14:45:47',
+ 'created_at': '2020-01-02 23:06',
+ 'favorite_count': 2,
+ 'id_str': '2003044395_InFPi2LH3',
+ 'reply_count': 1,
+ 'retweet_count': 0,
+ 'source': '小甜粽老田iPhone X',
+ 'text': '#武汉肺炎疫情患者被要求继续留院#任何病情没有查清楚之前还是慎重点好留院起码保障点',
+ 'user': '2003044395',
+ 'username': '田馥甄家的小馬',
+ 'weibo_url': 'https://weibo.com/2003044395/InFPi2LH3'}
+2020-02-04 14:45:47	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:47	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 14:45:47	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=5>
+{'crawled_at': '2020-02-04 14:45:47',
+ 'created_at': '2020-01-02 23:06',
+ 'favorite_count': 0,
+ 'id_str': '7332264988_InFPgjlNv',
+ 'reply_count': 0,
+ 'retweet_count': 0,
+ 'source': '华为手机 畅享玩不停',
+ 'text': '#武汉肺炎疫情患者被要求继续留院#不能有事啊！！',
+ 'user': '7332264988',
+ 'username': '一如既往84586',
+ 'weibo_url': 'https://weibo.com/7332264988/InFPgjlNv'}
+2020-02-04 14:45:47	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=5>
+{'crawled_at': '2020-02-04 14:45:47',
+ 'created_at': '2020-01-02 23:05',
+ 'favorite_count': 3,
+ 'id_str': '6042618446_InFP4r8SC',
+ 'reply_count': 0,
+ 'retweet_count': 0,
+ 'source': '前置双摄vivo X9',
+ 'text': '#武汉肺炎疫情患者被要求继续留院#想起了浪漫医生金师傅里面，真的得重视这种情况，医生们辛苦了',
+ 'user': '6042618446',
+ 'username': '普雅蔷薇',
+ 'weibo_url': 'https://weibo.com/6042618446/InFP4r8SC'}
+2020-02-04 14:45:47	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=%E6%AD%A6%E6%B1%89+%E8%82%BA%E7%82%8E&advancedfilter=1&hasori=1&starttime=20200101&endtime=20200102&sort=time&page=5>
+{'crawled_at': '2020-02-04 14:45:47',
+ 'created_at': '2020-01-02 23:02',
+ 'favorite_count': 11,
+ 'id_str': '6657819818_InFNXBAxs',
+ 'image_url': 'http://wx2.sinaimg.cn/wap180/007gzx4Cly1gaim5i9cmej30ku112e4z.jpg',
+ 'reply_count': 8,
+ 'retweet_count': 1,
+ 'source': 'iPhone客户端',
+ 'text': '可怕就可怕在这里，这几天武汉不明原因肺炎那事出来，一帮正能量大v拿兰州兽研所那事举例说很快就过去了，只是小范围事件。这立即就爆出来这么多感染者，撤热搜、掩盖不了的。',
+ 'user': '6657819818',
+ 'username': '老夫不睡觉',
+ 'weibo_url': 'https://weibo.com/6657819818/InFNXBAxs'}
+2020-02-04 14:46:04	scrapy.crawler	INFO	Received SIGINT, shutting down gracefully. Send again to force 
+2020-02-04 15:32:32	scrapy.utils.log	INFO	Scrapy 1.8.0 started (bot: WeiboSearch)
+2020-02-04 15:32:32	scrapy.utils.log	INFO	Versions: lxml 4.4.2.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.5 (default, Oct 25 2019, 10:52:18) - [Clang 4.0.1 (tags/RELEASE_401/final)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Darwin-19.3.0-x86_64-i386-64bit
+2020-02-04 15:32:32	scrapy.crawler	INFO	Overridden settings: {'BOT_NAME': 'WeiboSearch', 'DOWNLOAD_DELAY': 1, 'LOG_ENABLED': '0', 'NEWSPIDER_MODULE': 'WeiboSearch.spiders', 'RETRY_HTTP_CODES': [401, 403, 408, 414, 500, 502, 503, 504], 'SPIDER_MODULES': ['WeiboSearch.spiders']}
+2020-02-04 15:32:32	scrapy.extensions.telnet	INFO	Telnet Password: 48345cd2a4cf058b
+2020-02-04 15:32:32	scrapy.middleware	INFO	Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-02-04 15:32:33	scrapy.middleware	INFO	Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'WeiboSearch.middlewares.CookiesMiddleware',
+ 'WeiboSearch.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-02-04 15:32:33	scrapy.middleware	INFO	Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-02-04 15:32:33	scrapy.middleware	INFO	Enabled item pipelines:
+['WeiboSearch.pipelines.TimePipeline',
+ 'WeiboSearch.pipelines.WeiboSpiderPipeline',
+ 'WeiboSearch.pipelines.MongoPipeline']
+2020-02-04 15:32:33	scrapy.core.engine	INFO	Spider opened
+2020-02-04 15:32:33	scrapy.extensions.logstats	INFO	Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-02-04 15:32:33	scrapy.extensions.telnet	INFO	Telnet console listening on 127.0.0.1:6023
+2020-02-04 15:32:33	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 15:32:34	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/search/mblog?hideSearchFrame=&keyword=1%E6%9C%8811%E6%97%A5%EF%BC%8C%E6%B9%96%E5%8C%97%E6%AD%A6%E6%B1%89%E5%B8%82%E5%8D%AB%E5%81%A5%E5%A7%94%E9%80%9A%E6%8A%A5%E8%82%BA%E7%82%8E%E7%96%AB%E6%83%85%E6%97%B6%E7%A7%B0%EF%BC%8C%E7%BB%8F%E5%88%9D%E6%AD%A5%E8%AF%8A%E6%96%AD%EF%BC%8C%E6%9C%89%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92%E6%84%9F%E6%9F%93&advancedfilter=1&starttime=20200110&endtime=20200111&sort=time&hasori=1> (referer: None)
+2020-02-04 15:34:13	scrapy.extensions.logstats	INFO	Crawled 1 pages (at 1 pages/min), scraped 0 items (at 0 items/min)
+2020-02-04 15:34:13	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 15:34:13	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=1%E6%9C%8811%E6%97%A5%EF%BC%8C%E6%B9%96%E5%8C%97%E6%AD%A6%E6%B1%89%E5%B8%82%E5%8D%AB%E5%81%A5%E5%A7%94%E9%80%9A%E6%8A%A5%E8%82%BA%E7%82%8E%E7%96%AB%E6%83%85%E6%97%B6%E7%A7%B0%EF%BC%8C%E7%BB%8F%E5%88%9D%E6%AD%A5%E8%AF%8A%E6%96%AD%EF%BC%8C%E6%9C%89%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92%E6%84%9F%E6%9F%93&advancedfilter=1&starttime=20200110&endtime=20200111&sort=time&hasori=1>
+{'crawled_at': '2020-02-04 15:34:13',
+ 'created_at': '2020-01-11 20:07',
+ 'favorite_count': 1,
+ 'id_str': '6068931330_Ip1v3kNhX',
+ 'place': True,
+ 'reply_count': 0,
+ 'retweet_count': 0,
+ 'source': 'OPPO随光而变R17',
+ 'text': '【#武汉不明原因肺炎导致1人死亡#】1月11日，湖北武汉市卫健委通报肺炎疫情时称，经初步诊断，有新型冠状病毒感染的肺炎病例41例，其中已出院2例、重症7例、死亡1例，其余患者病情稳定。死者为61岁男性，因呼吸衰竭、重症肺炎入院，该患者常年在武汉华南海鲜市场采购货物，入院后症状无好转，于1月9日经抢救无效死亡。http://t.cn/AismI6WU',
+ 'user': '6068931330',
+ 'username': '海口同城',
+ 'weibo_url': 'https://weibo.com/6068931330/Ip1v3kNhX'}
+2020-02-04 15:34:16	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=1%E6%9C%8811%E6%97%A5%EF%BC%8C%E6%B9%96%E5%8C%97%E6%AD%A6%E6%B1%89%E5%B8%82%E5%8D%AB%E5%81%A5%E5%A7%94%E9%80%9A%E6%8A%A5%E8%82%BA%E7%82%8E%E7%96%AB%E6%83%85%E6%97%B6%E7%A7%B0%EF%BC%8C%E7%BB%8F%E5%88%9D%E6%AD%A5%E8%AF%8A%E6%96%AD%EF%BC%8C%E6%9C%89%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92%E6%84%9F%E6%9F%93&advancedfilter=1&starttime=20200110&endtime=20200111&sort=time&hasori=1>
+{'crawled_at': '2020-02-04 15:34:16',
+ 'created_at': '2020-01-11 15:00',
+ 'favorite_count': 4,
+ 'id_str': '2517950371_IoZusm3q5',
+ 'reply_count': 1,
+ 'retweet_count': 0,
+ 'source': '微博 weibo.com',
+ 'text': '【#武汉不明原因肺炎导致1人死亡#】1月11日，湖北武汉市卫健委通报肺炎疫情时称，经初步诊断，有新型冠状病毒感染的肺炎病例41例，其中已出院2例、重症7例、死亡1例，其余患者病情稳定。死者为61岁男性，因呼吸衰竭、重症肺炎入院，该患者常年在武汉华南海鲜市场采购货物，入院后症状无好转，于1月9日经抢救无效死亡。http://t.cn/AismI6WU',
+ 'user': '2517950371',
+ 'username': '新浪海南',
+ 'weibo_url': 'https://weibo.com/2517950371/IoZusm3q5'}
+2020-02-04 15:34:17	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 15:34:17	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 15:34:17	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 15:34:17	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=1%E6%9C%8811%E6%97%A5%EF%BC%8C%E6%B9%96%E5%8C%97%E6%AD%A6%E6%B1%89%E5%B8%82%E5%8D%AB%E5%81%A5%E5%A7%94%E9%80%9A%E6%8A%A5%E8%82%BA%E7%82%8E%E7%96%AB%E6%83%85%E6%97%B6%E7%A7%B0%EF%BC%8C%E7%BB%8F%E5%88%9D%E6%AD%A5%E8%AF%8A%E6%96%AD%EF%BC%8C%E6%9C%89%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92%E6%84%9F%E6%9F%93&advancedfilter=1&starttime=20200110&endtime=20200111&sort=time&hasori=1>
+{'crawled_at': '2020-02-04 15:34:17',
+ 'created_at': '2020-01-11 13:05',
+ 'favorite_count': 0,
+ 'id_str': '5065242068_IoYJQ6uDH',
+ 'place': True,
+ 'reply_count': 0,
+ 'retweet_count': 0,
+ 'source': 'Nokia X71 见微识广',
+ 'text': '#武汉不明原因肺炎导致1人死亡#1月11日，湖北武汉市卫健委通报肺炎疫情时称，经初步诊断，有新型冠状病毒感染的肺炎病例41例，其中已出院2例、重症7例、死亡1例，其余患者病情稳定。死者为61岁男性，因呼吸衰竭、重症肺炎入院，该患者常年在武汉华南海鲜市场采购货物，入院后症状无好转，于1月9日经抢救无效死亡。http://t.cn/AismI6WU',
+ 'user': '5065242068',
+ 'username': '新浪山东菏泽频道',
+ 'weibo_url': 'https://weibo.com/5065242068/IoYJQ6uDH'}
+2020-02-04 15:34:17	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=1%E6%9C%8811%E6%97%A5%EF%BC%8C%E6%B9%96%E5%8C%97%E6%AD%A6%E6%B1%89%E5%B8%82%E5%8D%AB%E5%81%A5%E5%A7%94%E9%80%9A%E6%8A%A5%E8%82%BA%E7%82%8E%E7%96%AB%E6%83%85%E6%97%B6%E7%A7%B0%EF%BC%8C%E7%BB%8F%E5%88%9D%E6%AD%A5%E8%AF%8A%E6%96%AD%EF%BC%8C%E6%9C%89%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92%E6%84%9F%E6%9F%93&advancedfilter=1&starttime=20200110&endtime=20200111&sort=time&hasori=1>
+{'crawled_at': '2020-02-04 15:34:17',
+ 'created_at': '2020-01-11 11:24',
+ 'favorite_count': 1,
+ 'id_str': '6437892299_IoY51cNWz',
+ 'reply_count': 0,
+ 'retweet_count': 0,
+ 'source': 'Weibo.intl',
+ 'text': '#武汉爆料#【#武汉不明原因肺炎导致1人死亡#】1月11日，湖北武汉市卫健委通报肺炎疫情时称，经初步诊断，有新型冠状病毒感染的肺炎病例41例，其中已出院2例、重症7例、死亡1例，其余患者病情稳定。死者为61岁男性，因呼吸衰竭、重症肺炎入院，该患者常年在武汉华南海鲜市场采购货物，入院后症状无好转，于1月9日经抢救无效死亡。http://t.cn/AismI6WU',
+ 'user': '6437892299',
+ 'username': '武汉辣点事',
+ 'weibo_url': 'https://weibo.com/6437892299/IoY51cNWz'}
+2020-02-04 15:34:18	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/search/mblog?hideSearchFrame=&keyword=1%E6%9C%8811%E6%97%A5%EF%BC%8C%E6%B9%96%E5%8C%97%E6%AD%A6%E6%B1%89%E5%B8%82%E5%8D%AB%E5%81%A5%E5%A7%94%E9%80%9A%E6%8A%A5%E8%82%BA%E7%82%8E%E7%96%AB%E6%83%85%E6%97%B6%E7%A7%B0%EF%BC%8C%E7%BB%8F%E5%88%9D%E6%AD%A5%E8%AF%8A%E6%96%AD%EF%BC%8C%E6%9C%89%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92%E6%84%9F%E6%9F%93&advancedfilter=1&starttime=20200110&endtime=20200111&sort=time&hasori=1>
+{'crawled_at': '2020-02-04 15:34:18',
+ 'created_at': '2020-01-11 11:20',
+ 'favorite_count': 232,
+ 'id_str': '6124642021_IoY3h49Te',
+ 'reply_count': 67,
+ 'retweet_count': 29,
+ 'source': '微博 weibo.com',
+ 'text': '【#武汉不明原因肺炎导致1人死亡#】1月11日，湖北武汉市卫健委通报肺炎疫情时称，经初步诊断，有新型冠状病毒感染的肺炎病例41例，其中已出院2例、重症7例、死亡1例，其余患者病情稳定。死者为61岁男性，因呼吸衰竭、重症肺炎入院，该患者常年在武汉华南海鲜市场采购货物，入院后症状无好转，于1月9日经抢救无效死亡。http://t.cn/AismI6WU',
+ 'user': '6124642021',
+ 'username': '新京报我们视频',
+ 'weibo_url': 'https://weibo.com/6124642021/IoY3h49Te'}
+2020-02-04 15:34:18	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 15:34:18	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 15:34:18	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 15:34:18	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/6068931330/Ip1v3kNhX> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=1%E6%9C%8811%E6%97%A5%EF%BC%8C%E6%B9%96%E5%8C%97%E6%AD%A6%E6%B1%89%E5%B8%82%E5%8D%AB%E5%81%A5%E5%A7%94%E9%80%9A%E6%8A%A5%E8%82%BA%E7%82%8E%E7%96%AB%E6%83%85%E6%97%B6%E7%A7%B0%EF%BC%8C%E7%BB%8F%E5%88%9D%E6%AD%A5%E8%AF%8A%E6%96%AD%EF%BC%8C%E6%9C%89%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92%E6%84%9F%E6%9F%93&advancedfilter=1&starttime=20200110&endtime=20200111&sort=time&hasori=1)
+2020-02-04 15:35:23	scrapy.core.scraper	DEBUG	Scraped from <200 https://weibo.cn/6068931330/Ip1v3kNhX>
+{'crawled_at': '2020-02-04 15:35:23',
+ 'created_at': '2020-01-11 20:07',
+ 'favorite_count': 1,
+ 'id_str': '6068931330_Ip1v3kNhX',
+ 'place': '海口',
+ 'reply_count': 0,
+ 'retweet_count': 0,
+ 'source': 'OPPO随光而变R17',
+ 'text': '【#武汉不明原因肺炎导致1人死亡#】1月11日，湖北武汉市卫健委通报肺炎疫情时称，经初步诊断，有新型冠状病毒感染的肺炎病例41例，其中已出院2例、重症7例、死亡1例，其余患者病情稳定。死者为61岁男性，因呼吸衰竭、重症肺炎入院，该患者常年在武汉华南海鲜市场采购货物，入院后症状无好转，于1月9日经抢救无效死亡。新京报我们视频的秒拍视频',
+ 'user': '6068931330',
+ 'username': '海口同城',
+ 'weibo_url': 'https://weibo.com/6068931330/Ip1v3kNhX'}
+2020-02-04 15:35:23	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/2517950371/info> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=1%E6%9C%8811%E6%97%A5%EF%BC%8C%E6%B9%96%E5%8C%97%E6%AD%A6%E6%B1%89%E5%B8%82%E5%8D%AB%E5%81%A5%E5%A7%94%E9%80%9A%E6%8A%A5%E8%82%BA%E7%82%8E%E7%96%AB%E6%83%85%E6%97%B6%E7%A7%B0%EF%BC%8C%E7%BB%8F%E5%88%9D%E6%AD%A5%E8%AF%8A%E6%96%AD%EF%BC%8C%E6%9C%89%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92%E6%84%9F%E6%9F%93&advancedfilter=1&starttime=20200110&endtime=20200111&sort=time&hasori=1)
+2020-02-04 15:35:23	scrapy.core.engine	DEBUG	Crawled (200) <GET https://weibo.cn/5065242068/IoYJQ6uDH> (referer: https://weibo.cn/search/mblog?hideSearchFrame=&keyword=1%E6%9C%8811%E6%97%A5%EF%BC%8C%E6%B9%96%E5%8C%97%E6%AD%A6%E6%B1%89%E5%B8%82%E5%8D%AB%E5%81%A5%E5%A7%94%E9%80%9A%E6%8A%A5%E8%82%BA%E7%82%8E%E7%96%AB%E6%83%85%E6%97%B6%E7%A7%B0%EF%BC%8C%E7%BB%8F%E5%88%9D%E6%AD%A5%E8%AF%8A%E6%96%AD%EF%BC%8C%E6%9C%89%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92%E6%84%9F%E6%9F%93&advancedfilter=1&starttime=20200110&endtime=20200111&sort=time&hasori=1)
+2020-02-04 15:35:23	scrapy.extensions.logstats	INFO	Crawled 4 pages (at 3 pages/min), scraped 6 items (at 6 items/min)
+2020-02-04 15:35:23	urllib3.connectionpool	DEBUG	Starting new HTTP connection (1): 127.0.0.1:5000
+2020-02-04 15:35:51	scrapy.crawler	INFO	Received SIGINT, shutting down gracefully. Send again to force 
