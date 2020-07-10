@@ -102,7 +102,7 @@ RETRY_HTTP_CODES = [401, 403, 408, 414, 500, 502, 503, 504]
 
 LOCAL_MONGO_HOST = '127.0.0.1'
 LOCAL_MONGO_PORT = 27017
-DB_NAME = 'covid_violence'
+DB_NAME = 'weibo_violence'
 WEIBO_COLLECTION = 'weibo_zh'
 USER_COLLECTION = 'weibo_users'
 

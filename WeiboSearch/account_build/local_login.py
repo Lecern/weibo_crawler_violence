@@ -10,7 +10,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 sys.path.append(os.getcwd())
-from settings import LOCAL_MONGO_HOST, LOCAL_MONGO_PORT, DB_NAME
+from ..settings import LOCAL_MONGO_HOST, LOCAL_MONGO_PORT, DB_NAME
 from webdriver_manager.chrome import ChromeDriverManager
 
 TEMPLATES_FOLDER = os.getcwd() + '/templates/'
