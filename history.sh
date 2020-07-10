@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 source /etc/profile
-if [[ $# -lt 3 ]]
+if [[ $# -lt 2 ]]
 then
     echo "Missing variable."
     exit 1
