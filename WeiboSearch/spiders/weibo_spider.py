@@ -68,6 +68,7 @@ class WeiboSpider(scrapy.Spider):
             keyword = KEY_WORDS
         for tweet_node in tweet_nodes:
             try:
+                # tweet_node = tweet_node.xpath('//span[@class="ctt"]')
                 tweet_item = TweetsItem()
 
                 tweet_repost_url = tweet_node.xpath('.//a[contains(text(),"转发[")]/@href').extract()[0]
@@ -111,9 +112,11 @@ class WeiboSpider(scrapy.Spider):
                     tweet_item['image_url'] = images.extract()[0]
 
                 # 视频
-                videos = tweet_node.xpath('.//a[contains(@href,"https://m.weibo.cn/s/video/show?object_id=")]/@href')
-                if videos:
-                    tweet_item['video_url'] = videos.extract()[0]
+                # videos = tweet_node.xpath('.//a[contains(text(), "http://t.cn/")]/@href')
+                # if videos:
+                #     # tweet_item['video_url'] = videos.extract()[0]
+                #     yield Request(self.base_url + "/" + '/'.join(tweet_item['id_str'].split('_')),
+                #                   callback=self.parse_all_content, meta={'item': tweet_item}, priority=3)
 
                 # 定位信息
                 map_node = tweet_node.xpath('.//a[contains(text(),"显示地图")]')
@@ -185,16 +188,20 @@ class WeiboSpider(scrapy.Spider):
         # text = re.sub(r"(<img alt=[\'|\"]\[)(.*?)(\][\'|\"].*?>)", ":\\2:", text, 0, re.IGNORECASE | re.MULTILINE)
         text = re.split(r'[0-9]{1,2}月[0-9]{1,2}日( )*[0-9]{1,2}:[0-9]{1,2} *关注[他|她] *举报', text)[0]
         text = re.sub(r"\[组图共[0-9]*张\]", "", text, 0).strip()
+        # 视频
+        videos = response.xpath('.//*[@id="M_"]/div[1]//span[@class="ctt"]//a[contains(text(), "的微博视频")]/@href')
+        if videos:
+            tweet_item['video_url'] = videos.extract()[0]
         if re.search(r"的微博视频", text):
             # text = re.sub(r"((?<= )|(.+)#.*)[^ ]*?的微博视频", "\\2", text, 1)
             text = re.sub(r"(.*)([ #@.,\-_|=+!。，])(.+的微博视频)(.*)", "\\1\\2\\4", text, 1)
         # tweet_item['text'] = re.sub(r"\[组图共[0-9]*张\]", "", text, 0).replace(' ', '')
         if 'place' in tweet_item:
-            # tweet_item['place'] = \
-            #     response.xpath('//*[@id="M_"]/div[1]//span[@class="ctt"]/a[last()]/text()').extract()[0]
+            tweet_item['place'] = \
+                response.xpath('//*[@id="M_"]/div[1]//span[@class="ctt"]/a[last()]/text()').extract()[0]
             loc_text = text.strip().rsplit(' ', 1)
             if len(loc_text) > 1:
-                tweet_item['place'] = loc_text[1]
+                # tweet_item['place'] = loc_text[1]
                 tweet_item['text'] = loc_text[0].replace(' ', '')
             else:
                 tweet_item['text'] = loc_text[0].replace(' ', '')
