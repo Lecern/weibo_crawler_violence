@@ -109,4 +109,4 @@ USER_COLLECTION = 'weibo_users'
 # ip代理 池
 PROXY_URL = 'http://127.0.0.1:5000/proxy/target/weibo/cn'
 
-KEY_WORDS = '#家暴#'
+KEY_WORDS = '家暴'

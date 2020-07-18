@@ -112,8 +112,9 @@ class WeiboSpider(scrapy.Spider):
                     tweet_item['image_url'] = images.extract()[0]
 
                 # 视频
-                # videos = tweet_node.xpath('.//a[contains(text(), "http://t.cn/")]/@href')
+                videos = tweet_node.xpath('.//a[contains(text(), "http://t.cn/")]/@href')
                 # if videos:
+                #     has_videos = True
                 #     # tweet_item['video_url'] = videos.extract()[0]
                 #     yield Request(self.base_url + "/" + '/'.join(tweet_item['id_str'].split('_')),
                 #                   callback=self.parse_all_content, meta={'item': tweet_item}, priority=3)
@@ -144,7 +145,7 @@ class WeiboSpider(scrapy.Spider):
                     if re.search(r"的(微博|秒拍)视频", text):
                         # text = re.sub(r"((?<= )|(.+)#.*)[^ ]*?的微博视频", "\\2", text, 1)
                         text = re.sub(r"(.*)([ #@.,\\|=+!。，])(.+的(微博|秒拍)视频)(.*)", "\\1\\2\\5", text, 1)
-                    if 'place' in tweet_item:
+                    if 'place' in tweet_item or videos:
                         content_loc = text.replace('显示地图', '').strip().rsplit(' ', 1)
                         tweet_item['text'] = content_loc[0].replace(' ', '')
                         if len(content_loc) > 1:
