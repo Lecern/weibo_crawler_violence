@@ -268,7 +268,7 @@ class WeiboSpider(scrapy.Spider):
         if labels and labels[0]:
             information_item["labels"] = labels[0].replace(u"\xa0", ",").replace(';', '').strip(',')
 
-        yield Request(self.base_url + '/u/{}'.format(information_item['id']),
+        yield Request(self.base_url + '/u/{}'.format(information_item['id_str']),
                       callback=self.parse_further_information,
                       meta={'item': information_item},
                       dont_filter=True, priority=1)
