@@ -34,7 +34,7 @@ class InformationItem(Item):
     """ 个人信息 """
     collection = 'Information'
 
-    id = Field()  # 用户ID
+    id_str = Field()  # 用户ID
     name = Field()  # 昵称
     gender = Field()  # 性别
     province = Field()  # 所在省

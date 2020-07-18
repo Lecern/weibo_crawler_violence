@@ -218,7 +218,7 @@ class WeiboSpider(scrapy.Spider):
         """ 抓取个人信息 """
         information_item = InformationItem()
 
-        information_item['id'] = re.findall('(\d+)/info', response.url)[0]
+        information_item['id_str'] = re.findall('(\d+)/info', response.url)[0]
         # 获取标签里的所有text()
         information_text = ";".join(response.xpath('//div[@class="c"]//text()').extract())
 
