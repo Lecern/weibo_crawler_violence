@@ -22,7 +22,7 @@ class WeiboSpider(scrapy.Spider):
     os.makedirs(log_path, exist_ok=True)
     now_date = datetime.datetime.now().strftime('%y%m%d')
     log_filename = log_path + "weibo_" + now_date + ".log"
-    logging.basicConfig(level=logging.DEBUG,
+    logging.basicConfig(level=logging.ERROR,
                         format="%(asctime)s\t%(name)s\t%(levelname)s\t%(message)s",
                         datefmt="%Y-%m-%d %H:%M:%S",
                         handlers=[logging.FileHandler(log_filename, encoding="utf-8")])
@@ -227,7 +227,7 @@ class WeiboSpider(scrapy.Spider):
                 for single_url_text in temp_place_upper:
                     if re.search("关注|举报|收藏|操作|视频|组图共[0-9]*张|#.*#|@", single_url_text):
                         continue
-                    if single_url_text.strip() == tweet_item['username']:
+                    if single_url_text.strip() == text.replace(' ', '').split(":", 1)[0].strip():
                         continue
                     if re.search("http", single_url_text):
                         continue
@@ -260,7 +260,7 @@ class WeiboSpider(scrapy.Spider):
         if len(name_content) > 1:
             tweet_item['text'] = name_content[1]
             tweet_item['username'] = name_content[0]
-        if tweet_item['place'] == ' ' or tweet_item['place'] is True:
+        if hasattr(tweet_item, 'place') and (tweet_item['place'] == ' ' or tweet_item['place'] is True):
             tweet_item['place'] = ''
         yield tweet_item
 
