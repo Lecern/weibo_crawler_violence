@@ -37,7 +37,8 @@ class WeiboSpider(scrapy.Spider):
             weibo_collection = client[DB_NAME][WEIBO_COLLECTION]
             cursor = weibo_collection.find({"place": {"$ne": None}}, {"_id": 0})
             for doc in cursor:
-                if 'place' in doc.keys() and doc['place'] is True or doc['place'].strip() == '':
+                if 'place' in doc.keys() and doc['place'] is True or doc['place'].strip() == '' \
+                        or re.match("http", doc['place']):
                     tweet_item = TweetsItem()
                     tweet_item = self.copy_attributes(tweet_item, doc)
                     repair_url = tweet_item['weibo_url'].replace('.com', '.cn')
@@ -366,19 +367,6 @@ class WeiboSpider(scrapy.Spider):
 
     @staticmethod
     def copy_attributes(item, doc):
-        item['id_str'] = doc['id_str'] if 'id_str' in doc.keys() else ''
-        item['weibo_url'] = doc['weibo_url'] if 'weibo_url' in doc.keys() else ''
-        item['created_at'] = doc['created_at'] if 'created_at' in doc.keys() else ''
-        item['favorite_count'] = doc['favorite_count'] if 'favorite_count' in doc.keys() else ''
-        item['retweet_count'] = doc['retweet_count'] if 'retweet_count' in doc.keys() else ''
-        item['reply_count'] = doc['reply_count'] if 'reply_count' in doc.keys() else ''
-        item['text'] = doc['text'] if 'text' in doc.keys() else ''
-        item['user'] = doc['user'] if 'user' in doc.keys() else ''
-        item['username'] = doc['username'] if 'username' in doc.keys() else ''
-        item['source'] = doc['source'] if 'source' in doc.keys() else ''
-        item['image_url'] = doc['image_url'] if 'image_url' in doc.keys() else ''
-        item['video_url'] = doc['video_url'] if 'video_url' in doc.keys() else ''
-        item['place'] = doc['place'] if 'place' in doc.keys() else ''
-        item['origin_weibo'] = doc['origin_weibo'] if 'origin_weibo' in doc.keys() else ''
-        item['crawled_at'] = doc['crawled_at'] if 'crawled_at' in doc.keys() else ''
+        for attr in doc.keys():
+            item[attr] = doc[attr]
         return item
