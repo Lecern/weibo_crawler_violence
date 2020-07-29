@@ -3,12 +3,12 @@ import datetime
 import logging
 import os
 import re
-import pymongo
-import jieba.posseg as pseg
-from nltk import word_tokenize, pos_tag, ne_chunk
-from nltk import Tree
 
+import jieba.posseg as pseg
+import pymongo
 import scrapy
+from nltk import Tree
+from nltk import word_tokenize, pos_tag, ne_chunk
 from scrapy import Request
 from scrapy.utils.log import configure_logging
 
@@ -37,12 +37,13 @@ class WeiboSpider(scrapy.Spider):
             weibo_collection = client[DB_NAME][WEIBO_COLLECTION]
             cursor = weibo_collection.find({"place": {"$ne": None}}, {"_id": 0})
             for doc in cursor:
-                if 'place' in doc.keys() and doc['place'] is True or doc['place'].strip() == '' \
-                        or re.match("http", doc['place']):
+                if 'place' in doc.keys() and doc['place'] is True or re.match("http", doc['place']) \
+                        or doc['place'].strip() == '':
                     tweet_item = TweetsItem()
                     tweet_item = self.copy_attributes(tweet_item, doc)
                     repair_url = tweet_item['weibo_url'].replace('.com', '.cn')
-                    yield Request(repair_url, callback=self.parse_all_content, meta={'item': tweet_item, 'repair': True}, dont_filter=True)
+                    yield Request(repair_url, callback=self.parse_all_content,
+                                  meta={'item': tweet_item, 'repair': True}, dont_filter=True)
         else:
             url_format = "https://weibo.cn/search/mblog?hideSearchFrame=&keyword={}&advancedfilter=1&starttime={}&endtime={}&sort=time"
 
@@ -147,7 +148,8 @@ class WeiboSpider(scrapy.Spider):
                 all_content_link = tweet_node.xpath('.//a[text()="全文" and contains(@href,"ckAll=1")]')
                 if all_content_link:
                     all_content_url = self.base_url + all_content_link.xpath('./@href').extract()[0]
-                    yield Request(all_content_url, callback=self.parse_all_content, meta={'item': tweet_item, 'repair': False})
+                    yield Request(all_content_url, callback=self.parse_all_content,
+                                  meta={'item': tweet_item, 'repair': False})
                 else:
                     # 微博内容
                     text = ''.join(tweet_node.xpath('./div[1]').xpath('string(.)').extract()
@@ -170,7 +172,8 @@ class WeiboSpider(scrapy.Spider):
                         #     else:
                         #         tweet_item['place'] = loc
                         yield Request(self.base_url + "/" + '/'.join(tweet_item['id_str'].split('_')),
-                                      callback=self.parse_all_content, meta={'item': tweet_item, 'repair': False}, priority=3)
+                                      callback=self.parse_all_content, meta={'item': tweet_item, 'repair': False},
+                                      priority=3)
                     # elif videos:
                     #     yield Request(self.base_url + "/" + '/'.join(tweet_item['id_str'].split('_')),
                     #                   callback=self.parse_all_content, meta={'item': tweet_item}, priority=3)
@@ -221,16 +224,14 @@ class WeiboSpider(scrapy.Spider):
         # tweet_item['text'] = re.sub(r"\[组图共[0-9]*张\]", "", text, 0).replace(' ', '')
         if 'place' in tweet_item:
             temp_place = response.xpath('//*[@id="M_"]/div[1]//span[@class="ctt"]/a[last()]/text()').extract()
-            if temp_place and len(temp_place) > 0 and re.search("视频|#.*#|@", temp_place[0]) is None:
+            if temp_place and len(temp_place) > 0 and (re.search("视频|#.*#|@|http", temp_place[0]) is None):
                 tweet_item['place'] = temp_place[0]
             else:
                 temp_place_upper = response.xpath('//*[@id="M_"]/div[1]//a/text()').extract()
                 for single_url_text in temp_place_upper:
-                    if re.search("关注|举报|收藏|操作|视频|组图共[0-9]*张|#.*#|@", single_url_text):
+                    if re.search("关注|举报|收藏|操作|视频|组图共[0-9]*张|#.*#|@|http", single_url_text):
                         continue
                     if single_url_text.strip() == text.replace(' ', '').split(":", 1)[0].strip():
-                        continue
-                    if re.search("http", single_url_text):
                         continue
                     if single_url_text.find("·") > 0:
                         tweet_item['place'] = single_url_text
@@ -247,7 +248,7 @@ class WeiboSpider(scrapy.Spider):
                                 if w.flag == 'ns':
                                     tweet_item['place'] = w.word
                                     break
-            if tweet_item['place'] is True or tweet_item['place'] == '':
+            if tweet_item['place'] is True or tweet_item['place'] == '' or re.search('http', tweet_item['place']):
                 tweet_item['place'] = ' '
             loc_text = text.strip().rsplit(tweet_item['place'], 1)
             if len(loc_text) > 1:
@@ -261,7 +262,8 @@ class WeiboSpider(scrapy.Spider):
         if len(name_content) > 1:
             tweet_item['text'] = name_content[1]
             tweet_item['username'] = name_content[0]
-        if hasattr(tweet_item, 'place') and (tweet_item['place'] == ' ' or tweet_item['place'] is True):
+        if hasattr(tweet_item, 'place') and (
+                tweet_item['place'] == ' ' or re.match("http", tweet_item['place']) or tweet_item['place'] is True):
             tweet_item['place'] = ''
         yield tweet_item
 
