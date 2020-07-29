@@ -3,6 +3,8 @@ import datetime
 import logging
 import os
 import re
+from bson.regex import Regex
+
 
 import jieba.posseg as pseg
 import pymongo
@@ -35,17 +37,22 @@ class WeiboSpider(scrapy.Spider):
         if self.repair == "True":
             client = pymongo.MongoClient(LOCAL_MONGO_HOST, LOCAL_MONGO_PORT)
             weibo_collection = client[DB_NAME][WEIBO_COLLECTION]
-            cursor = weibo_collection.find({"place": {"$ne": None}}, {"_id": 0})
+            query = {"text": {
+                u"$not": Regex(u".*\\x{5bb6}\\x{66b4}.*", "i")
+            }}
+            # cursor = weibo_collection.find({"place": {"$ne": None}}, {"_id": 0})
+            cursor = weibo_collection.find(query, {"_id": 0})
             for doc in cursor:
-                if 'place' in doc.keys() and doc['place'] is True or re.match("http", doc['place']) \
-                        or doc['place'].strip() == '':
-                    tweet_item = TweetsItem()
-                    tweet_item = self.copy_attributes(tweet_item, doc)
-                    repair_url = tweet_item['weibo_url'].replace('.com', '.cn')
-                    yield Request(repair_url, callback=self.parse_all_content,
-                                  meta={'item': tweet_item, 'repair': True}, dont_filter=True)
+                # if 'place' in doc.keys() and doc['place'] is True or re.match("http", doc['place']) \
+                #         or doc['place'].strip() == '':
+                tweet_item = TweetsItem()
+                tweet_item = self.copy_attributes(tweet_item, doc)
+                repair_url = tweet_item['weibo_url'].replace('.com', '.cn')
+                yield Request(repair_url, callback=self.parse_all_content,
+                              meta={'item': tweet_item, 'repair': True}, dont_filter=True)
         else:
-            url_format = "https://weibo.cn/search/mblog?hideSearchFrame=&keyword={}&advancedfilter=1&starttime={}&endtime={}&sort=time"
+            url_format = "https://weibo.cn/search/mblog?hideSearchFrame=&keyword={}&advancedfilter=1&starttime={" \
+                         "}&endtime={}&sort=time "
 
             # 搜索的关键词，可以修改
             if hasattr(self, "keyword") and self.keyword:
@@ -218,9 +225,11 @@ class WeiboSpider(scrapy.Spider):
         videos = response.xpath('.//*[@id="M_"]/div[1]//a[contains(text(), "视频")]/@href')
         if videos:
             tweet_item['video_url'] = videos.extract()[0]
-        if re.search(r"的(微博|秒拍)视频", text):
-            # text = re.sub(r"((?<= )|(.+)#.*)[^ ]*?的微博视频", "\\2", text, 1)
-            text = re.sub(r"(.*)([ #@.,\-_|=+!。，])(.+的(微博|秒拍)视频)(.*)", "\\1\\2\\5", text, 1)
+            video_text = response.xpath('.//*[@id="M_"]/div[1]//a[contains(text(), "视频")]/text()').extract()[0]
+        # if re.search(r"的(微博|秒拍)视频", text):
+        #     # text = re.sub(r"((?<= )|(.+)#.*)[^ ]*?的微博视频", "\\2", text, 1)
+        #     text = re.sub(r"(.*)([ #@.,\-_|=+!。，])(.+的(微博|秒拍)视频)(.*)", "\\1\\2\\5", text, 1)
+            text = text.replace(video_text, "")
         # tweet_item['text'] = re.sub(r"\[组图共[0-9]*张\]", "", text, 0).replace(' ', '')
         if 'place' in tweet_item:
             temp_place = response.xpath('//*[@id="M_"]/div[1]//span[@class="ctt"]/a[last()]/text()').extract()
