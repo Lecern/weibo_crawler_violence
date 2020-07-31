@@ -3,8 +3,9 @@ import datetime
 import logging
 import os
 import re
+import random
 from bson.regex import Regex
-
+from time import sleep
 
 import jieba.posseg as pseg
 import pymongo
@@ -52,7 +53,7 @@ class WeiboSpider(scrapy.Spider):
                               meta={'item': tweet_item, 'repair': True}, dont_filter=True)
         else:
             url_format = "https://weibo.cn/search/mblog?hideSearchFrame=&keyword={}&advancedfilter=1&starttime={" \
-                         "}&endtime={}&sort=time "
+                         "}&endtime={}&sort=time"
 
             # 搜索的关键词，可以修改
             if hasattr(self, "keyword") and self.keyword:
@@ -75,8 +76,10 @@ class WeiboSpider(scrapy.Spider):
             while date_start < date_end:
                 next_time = date_start + time_spread
                 url = url_format.format(keyword, date_start.strftime("%Y%m%d"), next_time.strftime("%Y%m%d"))
+                url += "&page=1"
                 date_start = next_time
-                yield Request(url, callback=self.parse_tweet, dont_filter=True)
+                yield Request(url, callback=self.parse_tweet, dont_filter=True,
+                              meta={'page1': 0, 'random_pages': random.randint(1, 5)})
 
     # 解析微博
     def parse_tweet(self, response):
@@ -205,10 +208,27 @@ class WeiboSpider(scrapy.Spider):
             except Exception as e:
                 self.logger.error(e)
 
-        next_page = response.xpath('//div[@id="pagelist"]//a[contains(text(),"下页")]/@href')
-        if next_page:
-            url = self.base_url + next_page[0].extract()
-            yield Request(url, callback=self.parse_tweet, dont_filter=True)
+        if tweet_nodes and len(tweet_nodes) > 0:
+            current_url = response.url.rsplit("=", 1)
+            if len(current_url) > 1:
+                page1 = response.meta['page1']
+                random_pages = response.meta['random_pages']
+                current_page = int(current_url[1])
+                # 通过加入随机等待避免被限制。爬虫速度过快容易被系统限制(一段时间后限
+                # 制会自动解除)，加入随机等待模拟人的操作，可降低被系统限制的风险。默
+                # 认是每爬取1到5页随机等待6到10秒，如果仍然被限，可适当增加sleep时间
+                if current_page - page1 == random_pages:
+                    sleep(random.randint(6, 10))
+                    page1 = current_page
+                    random_pages = random.randint(1, 3)
+                next_page = current_url[0] + "=" + str(current_page + 1)
+                yield Request(next_page, callback=self.parse_tweet, dont_filter=True,
+                              meta={'page1': page1, 'random_pages': random_pages})
+                # next_page = response.xpath('//div[@id="pagelist"]//a[contains(text(),"下页")]/@href')
+
+        # if next_page:
+        #     url = self.base_url + next_page[0].extract()
+        #     yield Request(url, callback=self.parse_tweet, dont_filter=True)
 
     def parse_all_content(self, response):
         # 有阅读全文的情况，获取全文
@@ -226,9 +246,9 @@ class WeiboSpider(scrapy.Spider):
         if videos:
             tweet_item['video_url'] = videos.extract()[0]
             video_text = response.xpath('.//*[@id="M_"]/div[1]//a[contains(text(), "视频")]/text()').extract()[0]
-        # if re.search(r"的(微博|秒拍)视频", text):
-        #     # text = re.sub(r"((?<= )|(.+)#.*)[^ ]*?的微博视频", "\\2", text, 1)
-        #     text = re.sub(r"(.*)([ #@.,\-_|=+!。，])(.+的(微博|秒拍)视频)(.*)", "\\1\\2\\5", text, 1)
+            # if re.search(r"的(微博|秒拍)视频", text):
+            #     # text = re.sub(r"((?<= )|(.+)#.*)[^ ]*?的微博视频", "\\2", text, 1)
+            #     text = re.sub(r"(.*)([ #@.,\-_|=+!。，])(.+的(微博|秒拍)视频)(.*)", "\\1\\2\\5", text, 1)
             text = text.replace(video_text, "")
         # tweet_item['text'] = re.sub(r"\[组图共[0-9]*张\]", "", text, 0).replace(' ', '')
         if 'place' in tweet_item:
