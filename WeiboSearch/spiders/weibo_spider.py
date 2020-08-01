@@ -154,6 +154,11 @@ class WeiboSpider(scrapy.Spider):
                 if repost_node:
                     tweet_item['origin_weibo'] = repost_node.extract()[0]
 
+                # 用户名
+                name_content = tweet_node.xpath('./div[1]/a[@class="nk" and @href]/text()').extract()[0]
+                if name_content:
+                    tweet_item['username'] = name_content
+
                 # 检测有没有阅读全文:
                 all_content_link = tweet_node.xpath('.//a[text()="全文" and contains(@href,"ckAll=1")]')
                 if all_content_link:
@@ -168,6 +173,8 @@ class WeiboSpider(scrapy.Spider):
                         text = ''.join(tweet_node.xpath('./div[last()]').xpath('string(.)').extract()
                                        ).replace(u'\xa0', '').replace(u'\u3000', '').split('赞[', 1)[0]
                     text = re.sub(r"\[组图共[0-9]*张\]", "", text, 0)
+                    if name_content:
+                        text = re.sub(name_content + r" {0,15}:", "", text, 1)
                     if re.search(r"的(微博|秒拍)视频", text):
                         # text = re.sub(r"((?<= )|(.+)#.*)[^ ]*?的微博视频", "\\2", text, 1)
                         text = re.sub(r"(.*)([ #@.,\\|=+!。，])(.+的(微博|秒拍)视频)(.*)", "\\1\\2\\5", text, 1)
@@ -192,13 +199,14 @@ class WeiboSpider(scrapy.Spider):
                     # if 'place' in tweet_item:
                     #     loc = text.replace('显示地图', '').rsplit(' ', 1)
                     #     tweet_item['place'] = loc
-                    name_content = tweet_item['text'].split(":", 1)
-                    if len(name_content) > 1:
-                        tweet_item['text'] = name_content[1]
-                        if re.search("转发", name_content[0]):
-                            tweet_item['username'] = name_content[0].split("转发")[0]
-                        else:
-                            tweet_item['username'] = name_content[0]
+                    # name_content = tweet_item['text'].split(":", 1)
+                    # if len(name_content) > 1:
+                    #     tweet_item['text'] = name_content[1]
+                    #     if re.search("转发", name_content[0]):
+                    #         tweet_item['username'] = name_content[0].split("转发")[0]
+                    #     else:
+                    #         tweet_item['username'] = name_content[0]
+
                     yield tweet_item
 
                 # 抓取该微博的用户信息
@@ -287,10 +295,15 @@ class WeiboSpider(scrapy.Spider):
                 tweet_item['text'] = loc_text[0].replace(' ', '')
         else:
             tweet_item['text'] = text.replace(' ', '')
-        name_content = tweet_item['text'].split(":", 1)
-        if len(name_content) > 1:
-            tweet_item['text'] = name_content[1]
-            tweet_item['username'] = name_content[0]
+        # name_content = tweet_item['text'].split(":", 1)
+        # if len(name_content) > 1:
+        #     tweet_item['text'] = name_content[1]
+        #     tweet_item['username'] = name_content[0]
+        name_content = response.xpath('.//*[@id="M_"]/div[1]/a[1]/text()').extract()[0]
+        if name_content:
+            tweet_item['username'] = name_content
+            if 'text' in tweet_item:
+                tweet_item['text'] = re.sub(name_content + r" {0,15}:", "", tweet_item['text'], 1)
         if hasattr(tweet_item, 'place') and (
                 tweet_item['place'] == ' ' or re.match("http", tweet_item['place']) or tweet_item['place'] is True):
             tweet_item['place'] = ''
