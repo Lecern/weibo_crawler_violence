@@ -288,11 +288,11 @@ class WeiboSpider(scrapy.Spider):
             if tweet_item['place'] is True or tweet_item['place'] == '' or re.search('http', tweet_item['place']):
                 tweet_item['place'] = ' '
             loc_text = text.strip().rsplit(tweet_item['place'], 1)
-            if len(loc_text) > 1:
-                # tweet_item['place'] = loc_text[1]
-                tweet_item['text'] = loc_text[0].replace(' ', '')
-            else:
-                tweet_item['text'] = loc_text[0].replace(' ', '')
+            # if len(loc_text) > 1:
+            #     # tweet_item['place'] = loc_text[1]
+            tweet_item['text'] = loc_text[0].replace(' ', '')
+            # else:
+            #     tweet_item['text'] = loc_text[0].replace(' ', '')
         else:
             tweet_item['text'] = text.replace(' ', '')
         # name_content = tweet_item['text'].split(":", 1)
@@ -302,8 +302,8 @@ class WeiboSpider(scrapy.Spider):
         name_content = response.xpath('.//*[@id="M_"]/div[1]/a[1]/text()').extract()[0]
         if name_content:
             tweet_item['username'] = name_content
-            if 'text' in tweet_item:
-                tweet_item['text'] = re.sub(name_content + r" {0,15}:", "", tweet_item['text'], 1)
+            # if 'text' in tweet_item:
+            tweet_item['text'] = re.sub(name_content + r" {0,15}:", "", tweet_item['text'], 1)
         if hasattr(tweet_item, 'place') and (
                 tweet_item['place'] == ' ' or re.match("http", tweet_item['place']) or tweet_item['place'] is True):
             tweet_item['place'] = ''
