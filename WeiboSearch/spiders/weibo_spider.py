@@ -38,9 +38,7 @@ class WeiboSpider(scrapy.Spider):
         if self.repair == "True":
             client = pymongo.MongoClient(LOCAL_MONGO_HOST, LOCAL_MONGO_PORT)
             weibo_collection = client[DB_NAME][WEIBO_COLLECTION]
-            query = {"text": {
-                u"$not": Regex(u".*\\x{5bb6}\\x{66b4}.*", "i")
-            }}
+            query = {"text": None}
             # cursor = weibo_collection.find({"place": {"$ne": None}}, {"_id": 0})
             cursor = weibo_collection.find(query, {"_id": 0})
             for doc in cursor:
