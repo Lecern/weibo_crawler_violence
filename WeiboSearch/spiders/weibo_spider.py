@@ -299,11 +299,11 @@ class WeiboSpider(scrapy.Spider):
         # if len(name_content) > 1:
         #     tweet_item['text'] = name_content[1]
         #     tweet_item['username'] = name_content[0]
-        name_content = response.xpath('.//*[@id="M_"]/div[1]/a[1]/text()').extract()[0]
+        name_content = response.xpath('.//*[@id="M_"]/div[1]/a[1]/text()').extract()
         if name_content:
-            tweet_item['username'] = name_content
+            tweet_item['username'] = name_content[0]
             # if 'text' in tweet_item:
-            tweet_item['text'] = re.sub(name_content + r" {0,15}:", "", tweet_item['text'], 1)
+            tweet_item['text'] = re.sub(name_content[0] + r" {0,15}:", "", tweet_item['text'], 1)
         if hasattr(tweet_item, 'place') and (
                 tweet_item['place'] == ' ' or re.match("http", tweet_item['place']) or tweet_item['place'] is True):
             tweet_item['place'] = ''
