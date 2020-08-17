@@ -40,14 +40,7 @@ class WeiboSpider(scrapy.Spider):
             client = pymongo.MongoClient(LOCAL_MONGO_HOST, LOCAL_MONGO_PORT)
             weibo_collection = client[DB_NAME][WEIBO_COLLECTION]
             # query = {"place": {"$ne": None}}
-            query = {"$or": [
-                {
-                    u"place": True
-                },
-                {
-                    u"place": u" "
-                }
-            ]}
+            query = {"place": True}
             # cursor = weibo_collection.find({"place": {"$ne": None}}, {"_id": 0})
             cursor = weibo_collection.find(query, {"_id": 0})
             for doc in cursor:
